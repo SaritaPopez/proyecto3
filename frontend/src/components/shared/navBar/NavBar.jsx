@@ -6,7 +6,7 @@ function NavBar() {
   return (
     <nav className='nav-bar'>
       <div className='container-signup'>
-        <NavLink to='sign-up'>
+        <NavLink to='register'>
           <p> Sign up</p>
         </NavLink>
       </div>

@@ -1,39 +1,31 @@
 import PropTypes from 'prop-types';
+import EntryBody from './entryBody/EntryBody';
+import EntryHeader from './entryHeader/EntryHeader';
+import EntryFooter from './entryFooter/EntryFooter';
 
-import './entry.css';
-
-const Entry = ({ entry }) => {
+const Entry = ({ entry, toogleLike, deleteEntry, loading }) => {
+  console.log('Nombre de la imagen:', entry.photos[0]?.name);
   return (
     <li className='entry'>
-      <header className='headerEntry'>
-        <p>{entry.username}</p>
-        <p>{entry.title}</p>
-        <time>
-          {new Date(entry.createdAt).toLocaleDateString('es-ES', {
-            hour: '2-digit',
-            minute: '2-digit',
-            day: '2-digit',
-            month: '2-digit',
-            year: '2-digit',
-          })}
-        </time>
-      </header>
-      <div>
-        <p>{entry.description}</p>
-        {entry.photos && (
-          <img
-            src={`http://localhost:8080/uploads/${entry.photos[0]?.name}`}
-            alt='imagen adjunta a la entry'
-          />
-        )}
-      </div>
-        <p> aquí irá el like</p>
+      <EntryBody description={entry.description} photos={entry.photos} />
+      <EntryHeader username={entry.username} createdAt={entry.createdAt} />
+      <EntryFooter
+        entryId={entry.id}
+        owner={entry.owner}
+        likes={entry.likes}
+        likedByMe={entry.likedByMe}
+        toogleLike={toogleLike}
+        deleteTweet={deleteEntry}
+        loading={loading}
+      />
     </li>
   );
 };
 
 Entry.propTypes = {
   entry: PropTypes.object,
+  toogleLike: PropTypes.func,
+  deleteTweet: PropTypes.func,
+  loading: PropTypes.bool,
 };
-
 export default Entry;
