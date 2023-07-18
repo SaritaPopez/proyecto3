@@ -1,4 +1,5 @@
 .block-container {
-    overflow: scroll;
-    margin-bottom: 3rem ;
+  overflow: scroll;
+  margin-bottom: 3rem;
+  height: 30vh;
 }

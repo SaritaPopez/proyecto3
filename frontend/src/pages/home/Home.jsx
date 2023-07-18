@@ -1,7 +1,7 @@
 import Header from '../../components/header/Header';
 import Footer from '../../components/footer/Footer';
 import EntriesSearch from '../../components/EntriesSearch/EntriesSearch';
-
+import Comments from '../../components/comments/Comments';
 import './home.css';
 
 function Home() {
@@ -13,6 +13,7 @@ function Home() {
         <p>Discover fun new cities below</p>
       </section>
       <EntriesSearch />
+      <Comments />
       <Footer />
     </div>
   );

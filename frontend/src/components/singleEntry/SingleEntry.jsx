@@ -4,6 +4,7 @@ import useAuth from '../../hooks/useAuth';
 import getEntryService from '../../services/getEntryService';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import Header from '../header/Header';
 import './singleentry.css';
 
 const SingleEntryPage = () => {
@@ -37,33 +38,38 @@ const SingleEntryPage = () => {
   };
 
   return (
-    <div className='single-entry'>
-      <h2>{entry.title}</h2>
-      <p>Descripción: {entry.description}</p>
-      <p>
-        Ubicación: {entry.city}, Distrito: {entry.district}
-      </p>
+    <div className='single'>
+      <Header />
+      <div className='divEntry'>
+        <div className='single-entry'>
+          <h2>{entry.title}</h2>
+          <p>Descripción: {entry.description}</p>
+          <p>
+            Ubicación: {entry.city}, Distrito: {entry.district}
+          </p>
 
-      <div className='entry-photos'>
-        {entry.photos.map((photo) => (
-          <img
-            key={photo.id}
-            src={`http://localhost:8080/uploads/${photo.name}`}
-            alt={`Imagen ${photo.id}`}
-          />
-        ))}
+          <div className='entry-photos'>
+            {entry.photos.map((photo) => (
+              <img
+                key={photo.id}
+                src={`http://localhost:8080/uploads/${photo.name}`}
+                alt={`Imagen ${photo.id}`}
+              />
+            ))}
+          </div>
+          <p>Creado por: {entry.username}</p>
+          {/* Botón de "like" */}
+          <button
+            className={`like-button ${liked ? 'liked' : ''}`}
+            onClick={handleLike}
+          >
+            <FontAwesomeIcon icon={faHeart} />
+            {liked ? entry.likes + 1 : entry.likes}
+          </button>
+
+          <p>Fecha de creación: {new Date(entry.createdAt).toLocaleString()}</p>
+        </div>
       </div>
-      <p>Creado por: {entry.username}</p>
-      {/* Botón de "like" */}
-      <button
-        className={`like-button ${liked ? 'liked' : ''}`}
-        onClick={handleLike}
-      >
-        <FontAwesomeIcon icon={faHeart} />
-        {liked ? entry.likes + 1 : entry.likes}
-      </button>
-
-      <p>Fecha de creación: {new Date(entry.createdAt).toLocaleString()}</p>
     </div>
   );
 };
