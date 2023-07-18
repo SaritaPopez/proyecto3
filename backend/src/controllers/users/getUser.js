@@ -4,7 +4,10 @@ const { generateError } = require('../../services/helpers');
 
 const getUser = async (req, res, next) => {
   try {
-    const user = await selectUserByIdQuery(req.user.id);
+
+    const { userId } = req.params;
+
+    const user = await selectUserByIdQuery(userId);
 
     // Eliminamos el email ya que es privado y no se debe saber.
     delete user.email;
