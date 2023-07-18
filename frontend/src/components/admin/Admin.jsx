@@ -52,12 +52,12 @@ const Admin = ({ token }) => {
             <p>San Diego, Ca</p>
           </div>
           <div className='container2'>
-            <p>¡Haz tu ciudad más accesible hoy!</p>
+            <p>
+              ¡Haz tu ciudad más <br></br>accesible hoy!
+            </p>
 
             <form onSubmit={handleSubmit} className='form-container'>
               <h2>Escribe tu entrada </h2>
-
-              <input type='file' onChange={(e) => setFile(e.target.files[0])} />
 
               <textarea
                 className='textarea'
@@ -67,6 +67,7 @@ const Admin = ({ token }) => {
                 autoFocus
                 required
               />
+              <input type='file' onChange={(e) => setFile(e.target.files[0])} />
 
               <button disabled={loading}>Enviar</button>
 
