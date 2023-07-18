@@ -1,24 +1,37 @@
 import { Link } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
 import './footer.css';
 
 function Footer() {
+  const {token, logout} = useAuth();
+
   return (
     <footer>
-      <div className='container-home'>
-        <Link href="http://www.google.es">
-            <img src='src/assets/home.png' alt='icono casa' />
-        </Link>
-      </div>
+      {token ? (
+      <>
       <div className='container-entries'>
-        <Link to='newEntries'>
+        <Link to='/message'>
         <img src='src/assets/mas.png' alt='icono mas' />
         </Link>
       </div>
-      <div className='container-user'>
-        <Link to='users'>
-        <img src='src/assets/perfil.png' alt='icono perfil' />
+      <div className='container-home'>
+        <Link to="/">
+            <img src='src/assets/home.png' alt='icono casa' />
         </Link>
       </div>
+      <div className='container-logout'>
+      <button className='button-logout' onClick={logout}>
+          <img src='src/assets/logout.png' alt='icono logout' />
+        </button>
+      </div>
+      </>
+    ) : (
+      <div className='container-home'>
+        <Link to="/">
+            <img src='src/assets/home.png' alt='icono casa' />
+        </Link>
+      </div>
+      )}
     </footer>
   );
 }

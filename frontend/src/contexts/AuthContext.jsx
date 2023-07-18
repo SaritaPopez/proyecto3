@@ -1,4 +1,5 @@
 import { createContext, useEffect, useState } from 'react';
+import { useNavigate } from "react-router-dom";
 import PropTypes from 'prop-types';
 import userService from '../services/userService';
 //Creamos contexto inicial en null
@@ -7,6 +8,8 @@ const AuthContext = createContext(null);
 const AuthProvider = ({ children }) => {
   const [token, setToken] = useState(localStorage.getItem('token'));
   const [user, setUser] = useState(null);
+
+  const navigate = useNavigate();
 
   // Obtenemos los datos del usuario si existe un token.
   useEffect(() => {
@@ -35,6 +38,7 @@ const AuthProvider = ({ children }) => {
     localStorage.removeItem('token');
     setToken(null);
     setUser(null);
+    navigate("/login");
   };
 
   return (

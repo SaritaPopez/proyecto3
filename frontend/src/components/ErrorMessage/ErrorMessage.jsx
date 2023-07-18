@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 function ErrorMessage({ msg }) {
-  return <p>ErrorMessage: {msg}</p>;
+  return <p>{msg}</p>;
 }
 
 ErrorMessage.propTypes = {

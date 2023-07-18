@@ -8,3 +8,8 @@ footer {
     width: 100%;
     min-height: 3rem; 
 };
+
+.button-logout {
+    border: transparent;
+    color: white;
+}

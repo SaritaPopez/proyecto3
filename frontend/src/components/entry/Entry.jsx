@@ -7,8 +7,8 @@ const Entry = ({ entry, toogleLike, deleteEntry, loading }) => {
   console.log('Nombre de la imagen:', entry.photos[0]?.name);
   return (
     <li className='entry'>
-      <EntryBody description={entry.description} photos={entry.photos} />
       <EntryHeader username={entry.username} createdAt={entry.createdAt} />
+      <EntryBody description={entry.description} photos={entry.photos} />
       <EntryFooter
         entryId={entry.id}
         owner={entry.owner}

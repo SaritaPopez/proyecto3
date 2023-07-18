@@ -18,19 +18,18 @@
 .headerEntry {
   background: hsl(0, 0%, 100%);
 }
-li.tweet {
-  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.374);
+li.entry {
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.134);
 }
 
-li.tweet:not(:first-child) {
+li.entry:not(:first-child) {
   margin: 1rem 0;
 }
 
-li.tweet > header {
+li.entry > header {
   display: flex;
-  justify-content: space-between;
-  padding: 0.5rem 1rem;
-  background-color: rgb(230, 230, 230);
+  justify-content: space-around;
+ 
 }
 
 li.tweet > div {
