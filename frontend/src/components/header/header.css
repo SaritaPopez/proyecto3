@@ -1,7 +1,7 @@
 header {
   width: 100%;
   height: 100px;
-  background-color: rgba(255, 255, 255, 0.095);
+  background-color: rgb(255, 255, 255);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,13 +10,13 @@ header {
 }
 
 h1 {
-  text-align: left;
+  /* text-align: left;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; */
   font-family: Montserrat, sans-serif;
+  position: absolute;
   color: black;
-
   text-decoration: none;
 }
 .navb {
@@ -31,7 +31,12 @@ nav > p {
   align-self: center;
   font-weight: bold;
 }
-nav > div.buttonB {
+
+.linkStyle {
+  text-decoration: none;
+  color: black;
+}
+/* nav > div.buttonB {
   border-radius: 20px;
   padding: 4px;
   width: 70px;
@@ -85,4 +90,4 @@ nav > div.buttonB > img {
 }
 nav > div.buttonBA:hover {
   background-color: rgba(255, 0, 0, 0.314);
-}
+} */

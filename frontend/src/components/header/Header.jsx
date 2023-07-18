@@ -9,11 +9,11 @@ function Header() {
     <>
       <header>
         <h1>
-          <Link to='/'>Ciudad Accesible</Link>
+          <Link className='linkStyle' to='/'>Ciudad Accesible</Link>
         </h1>
         <nav className='navb'>
           {user && <p>@{user.username}</p>}
-
+{/* 
           <>
             <div className='buttonB'>
               <Link to='/message'>Mensaje</Link>
@@ -24,7 +24,7 @@ function Header() {
                 alt='imagen logout'
               />
             </div>
-          </>
+          </> */}
         </nav>
       </header>
       <NavBar />

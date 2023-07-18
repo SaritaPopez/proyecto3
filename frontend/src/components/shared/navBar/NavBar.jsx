@@ -6,12 +6,12 @@ function NavBar() {
   return (
     <nav className='nav-bar'>
       <div className='container-signup'>
-        <NavLink to='register'>
+        <NavLink className='linkStyle' to='register'>
           <p> Sign up</p>
         </NavLink>
       </div>
       <div className='container-login'>
-        <NavLink to='login'>
+        <NavLink className='linkStyle' to='login'>
           <p>login</p>
         </NavLink>
       </div>

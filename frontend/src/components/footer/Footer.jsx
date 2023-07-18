@@ -10,7 +10,7 @@ function Footer() {
       {token ? (
       <>
       <div className='container-entries'>
-        <Link to='/message'>
+        <Link to='/admin'>
         <img src='src/assets/mas.png' alt='icono mas' />
         </Link>
       </div>

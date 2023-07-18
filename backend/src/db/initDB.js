@@ -73,7 +73,7 @@ const main = async () => {
 
     //Encriptamos contraseña administrador
 
-    const hashedPass = await bcrypt.hash('123456', 10);
+    const hashedPass = await bcrypt.hash('123456789aA!', 10);
 
     await connection.query(
       `INSERT INTO users (email, username, password,role,  createdAt) VALUES ('admin@gmail.com', 'admin', '${hashedPass}', 'admin', ?)`,
