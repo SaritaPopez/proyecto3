@@ -1,0 +1,29 @@
+.Admin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  background-color: #897d7d;
+}
+.imgProfile img {
+  border-radius: 200px;
+  width: 125px;
+}
+.textarea {
+  background-color: rgb(203, 203, 203);
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilo del textarea */
+.textarea {
+  background-color: rgb(203, 203, 203);
+  width: 100%;
+  min-height: 200px; /* Ajusta la altura según tus necesidades */
+  padding: 10px;
+  margin-bottom: 10px;
+}

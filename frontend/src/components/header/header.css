@@ -1,15 +1,42 @@
 header {
   width: 100%;
   height: 100px;
-  background-color: rgb(249, 248, 248);
+  background-color: rgba(255, 255, 255, 0.095);
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  text-decoration: none;
 }
 
 h1 {
   font-family: Montserrat, sans-serif;
   color: black;
   position: absolute;
+  text-decoration: none;
+}
+nav > div.buttonB {
+  padding: 0.5rem 0;
+  width: 80px;
+  font-weight: bold;
+  text-align: center;
+  background-color: rgb(187, 99, 99);
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.4);
+}
+
+nav > div.buttonB:active {
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+nav > div.buttonB:first-child {
+  margin-right: 1rem;
+}
+
+nav > div.buttonB a {
+  text-decoration: none;
+  color: black;
+}
+
+nav > div.buttonB > p {
+  color: black;
 }
