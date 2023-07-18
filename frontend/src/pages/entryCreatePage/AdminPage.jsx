@@ -1,9 +1,8 @@
 import { Navigate } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
-import EntryCreateForm from '../../components/entryCreateForm/EntryCreateForm';
-import './entrycreatepage.css';
+import Admin from '../../components/admin/Admin';
 
-const EntryCreatePage = () => {
+const AdminPage = () => {
   const { token } = useAuth();
 
   // Si la persona NO está logeada la redirigimos a la página principal.
@@ -11,9 +10,9 @@ const EntryCreatePage = () => {
 
   return (
     <main className='entryCreate'>
-      <EntryCreateForm token={token} />
+      <Admin token={token} />
     </main>
   );
 };
 
-export default EntryCreatePage;
+export default AdminPage;

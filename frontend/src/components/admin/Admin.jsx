@@ -1,11 +1,11 @@
-import Header from '../../components/header/Header';
+import Header from '../header/Header';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import entryCreateService from '../../services/createEntryService';
-import Spinner from '../../components/Spinner/Spinner';
-import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
+import Spinner from '../Spinner/Spinner';
+import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import './admin.css';
 
 const Admin = ({ token }) => {
@@ -42,40 +42,39 @@ const Admin = ({ token }) => {
       <Header />
       <div className='Admin'>
         <div className='imgProfile'>
-          <img
-            src='https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-            alt='Imagen de perfil'
-          />
-
-          <p>Administrador</p>
-          <p>San Diego, Ca</p>
-
-          <p>Haz tu ciudad más accesible</p>
-
-          <p>
-            Fecha de creación: {formattedDate} - {formattedTime}
-          </p>
-
-          <form onSubmit={handleSubmit} className='form-container'>
-            <h2>Escribe tu entrada </h2>
-
-            <input type='file' onChange={(e) => setFile(e.target.files[0])} />
-
-            <textarea
-              className='textarea'
-              value={text}
-              onChange={(e) => setText(e.target.value)}
-              minLength='10'
-              autoFocus
-              required
+          <div className='contaniner1'>
+            <img
+              src='https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+              alt='Imagen de perfil'
             />
 
-            <button disabled={loading}>Enviar</button>
+            <p>Administrador</p>
+            <p>San Diego, Ca</p>
+          </div>
+          <div className='container2'>
+            <p>¡Haz tu ciudad más accesible hoy!</p>
 
-            {loading && <Spinner />}
+            <form onSubmit={handleSubmit} className='form-container'>
+              <h2>Escribe tu entrada </h2>
 
-            {errMsg && <ErrorMessage msg={errMsg} />}
-          </form>
+              <input type='file' onChange={(e) => setFile(e.target.files[0])} />
+
+              <textarea
+                className='textarea'
+                value={text}
+                onChange={(e) => setText(e.target.value)}
+                minLength='10'
+                autoFocus
+                required
+              />
+
+              <button disabled={loading}>Enviar</button>
+
+              {loading && <Spinner />}
+
+              {errMsg && <ErrorMessage msg={errMsg} />}
+            </form>
+          </div>
         </div>
       </div>
     </div>

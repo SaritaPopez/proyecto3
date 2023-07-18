@@ -4,9 +4,9 @@ import Home from './pages/home/Home';
 import NotFoundPage from './pages/notFoundPage/NotFoundPage';
 import RegisterPage from './pages/registerPage/RegisterPage';
 import LoginPage from './pages/loginPage/LoginPage';
-import EntryCreatePage from './pages/entryCreatePage/EntryCreatePage';
+import EntryCreatePage from './pages/entryCreatePage/AdminPage';
 import SingleEntryPage from './components/singleEntry/SingleEntry';
-import Admin from './pages/admin/Admin';
+import Admin from './components/admin/Admin';
 
 function App() {
   return (
