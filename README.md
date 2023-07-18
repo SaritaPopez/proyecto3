@@ -1,6 +1,6 @@
 # Pendiente
 
-- Tutoría para preguntar por el error que da obtener info usuario.
+- Tutoría para preguntar por el error que da obtener info usuario ✅ HECHO!
 - Poder subir desde admin la entrada y que esta se publique en home.
 - Documentación proyecto -> Javi
 - Logo sitio web.

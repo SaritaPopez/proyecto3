@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
+//Porque estamos importando esto si no tiene uso?
+
 // Importamos los middlewares personalizados.
 const authUser = require('../middlewares/authUser');
 const userExists = require('../middlewares/userExists');
@@ -16,6 +18,6 @@ router.post('/users', newUser);
 router.post('/users/login', loginUser);
 
 //Obtener información de mi usuario.
-router.get('/users', getUser);
+router.get('/users/:userId', getUser);
 
 module.exports = router;
