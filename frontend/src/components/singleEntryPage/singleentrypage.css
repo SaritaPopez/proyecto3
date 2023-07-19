@@ -1,12 +1,95 @@
-.single {
-  width: 100vw;
+@media screen and (min-width: 480px) {
+  /* pantallas más pequeñas */
+  .single {
+    width: 100vw;
+    position: relative;
+  }
 
-  position: relative; /* Añadir posicionamiento relativo al contenedor */
+  .single img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+  }
+
+  .headertitle {
+    padding-top: 20px;
+    width: 100vw;
+    height: 80px;
+    color: white;
+    font-family: Montserrat, sans-serif;
+    text-align: center;
+    position: absolute;
+    bottom: -95px;
+    z-index: 1;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.888),
+      rgba(0, 0, 0, 0.99)
+    );
+  }
+
+  .parrafo {
+    padding-left: 80px;
+    position: absolute;
+    top: 592px; /* Colocar el div "parrafo" debajo del div "headertitle" */
+    width: 100%;
+    font-family: Montserrat, sans-serif;
+  }
+
+  .blue {
+    background-color: rgba(
+      27,
+      182,
+      164,
+      0.59
+    ); /* Color de fondo con transparencia */
+    position: absolute;
+    top: 473px; /* Ajustar la posición del div .blue debajo de .headertitle */
+    height: 100vh;
+    color: transparent;
+    width: 40px;
+  }
+
+  .district {
+    top: 700px; /* Colocar el div "parrafo" debajo del div "headertitle" */
+    width: 100%;
+    font-family: Montserrat, sans-serif;
+  }
+  .entry-photos img {
+    width: 100vh;
+  }
+  .single-entry h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .single-entry p {
+    margin-bottom: 5px;
+  }
+
+  .like-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+  }
+
+  .like-button.liked {
+    color: #ff0000; /* Color rojo para el corazón "liked" */
+  }
+}
+/*.single {
+  width: 100vw;
+  position: relative;
 }
 
 .single img {
-  width: 100vw;
-  height: 400px;
+  width: 100%;
+  height: auto;
+  max-height: 400px;
 }
 
 .headertitle {
@@ -18,30 +101,35 @@
   text-align: center;
   position: absolute;
   bottom: -95px;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.945),
-    rgba(0, 0, 0, 0.37)
-  );
+  background-color: rgba(0, 0, 0, 0.7); /* Color de fondo con transparencia */
+/*}
 
-  color: rgb(255, 255, 255);
-  font-family: Montserrat, sans-serif;
-  text-align: center;
-  position: absolute;
-  bottom: -95px;
-}
 .parrafo {
-  text-align: center;
+  padding-left: 80px;
   position: absolute;
-  top: 700px; /* Colocar el div "parrafo" debajo del div "headertitle" */
-  width: 100%;
+  top: 502px; /* Colocar el div "parrafo" debajo del div "headertitle" */
+/*width: 100%;
+  font-family: Montserrat, sans-serif;
 }
+
 .blue {
-  background-color: rgba(96, 188, 177, 1);
-  position: absolute;
-  top: 652px;
-  height: 100%;
+  background-color: rgba(
+    27,
+    182,
+    164,
+    0.59
+  ); /* Color de fondo con transparencia */
+/*position: absolute;
+  top: 413px; /* Ajustar la posición del div .blue debajo de .headertitle */
+/* height: 100vh;
   color: transparent;
+  width: 40px;
+}
+
+.district {
+  top: 700px; /* Colocar el div "parrafo" debajo del div "headertitle" */
+/*width: 100%;
+  font-family: Montserrat, sans-serif;
 }
 .entry-photos img {
   width: 100vh;
@@ -69,7 +157,7 @@
   height: auto;
   border-radius: 5px;
 }*/
-.like-button {
+/*.like-button {
   background: transparent;
   border: none;
   cursor: pointer;
@@ -80,8 +168,4 @@
 
 .like-button.liked {
   color: #ff0000; /* Color rojo para el corazón "liked" */
-}
-.alice-carousel {
-  margin-top: 20px;
-  width: 100%; /* Ajusta el ancho del carrusel según tu preferencia */
-}
+/*}*/

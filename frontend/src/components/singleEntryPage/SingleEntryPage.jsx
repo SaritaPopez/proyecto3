@@ -55,13 +55,18 @@ const SingleEntryPage = () => {
         ))}
         <div className='blue'>div</div>
         <div className='parrafo'>
+          <h4>OVERVIEW</h4>
           <p>{entry.description}</p>
-          <p>
-            {entry.city}, Distrito: {entry.district}
-          </p>
+          <div className='district'>
+            <p>
+              {entry.city}, Distrito: {entry.district}
+            </p>
+          </div>
 
           <p>Autor: {entry.username}</p>
+          <p>Fecha de creación: {new Date(entry.createdAt).toLocaleString()}</p>
           {/* Botón de "like" */}
+
           <button
             className={`like-button ${liked ? 'liked' : ''}`}
             onClick={handleLike}
@@ -69,8 +74,6 @@ const SingleEntryPage = () => {
             <FontAwesomeIcon icon={faHeart} />
             {liked ? entry.likes + 1 : entry.likes}
           </button>
-
-          <p>Fecha de creación: {new Date(entry.createdAt).toLocaleString()}</p>
         </div>
         <Footer />
       </div>
