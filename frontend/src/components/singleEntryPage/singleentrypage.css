@@ -3,6 +3,7 @@
   .single {
     width: 100vw;
     position: relative;
+    overflow-x: hidden;
   }
 
   .single img {
@@ -44,7 +45,7 @@
       0.59
     ); /* Color de fondo con transparencia */
     position: absolute;
-    top: 473px; /* Ajustar la posición del div .blue debajo de .headertitle */
+    top: 99%; /* Ajustar la posición del div .blue debajo de .headertitle */
     height: 100vh;
     color: transparent;
     width: 40px;

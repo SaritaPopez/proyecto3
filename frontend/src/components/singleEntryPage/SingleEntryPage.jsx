@@ -40,8 +40,8 @@ const SingleEntryPage = () => {
 
   return (
     <>
+      <Header />
       <div className='single'>
-        <Header />
         <div className='headertitle'>
           <h2>{entry.title}</h2>
         </div>
