@@ -4,8 +4,9 @@ import useAuth from '../../hooks/useAuth';
 import getEntryService from '../../services/getEntryService';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import Footer from '../../components/footer/Footer';
 import Header from '../header/Header';
-import './singleentry.css';
+import './singleentrypage.css';
 
 const SingleEntryPage = () => {
   const { entryId } = useParams();
@@ -38,26 +39,28 @@ const SingleEntryPage = () => {
   };
 
   return (
-    <div className='single'>
-      <Header />
-      <div className='divEntry'>
-        <div className='single-entry'>
+    <>
+      <div className='single'>
+        <Header />
+        <div className='headertitle'>
           <h2>{entry.title}</h2>
-          <p>Descripción: {entry.description}</p>
+        </div>
+
+        {entry.photos.map((photo) => (
+          <img
+            key={photo.id}
+            src={`http://localhost:8080/uploads/${photo.name}`}
+            alt={`Imagen ${photo.id}`}
+          />
+        ))}
+        <div className='blue'>div</div>
+        <div className='parrafo'>
+          <p>{entry.description}</p>
           <p>
-            Ubicación: {entry.city}, Distrito: {entry.district}
+            {entry.city}, Distrito: {entry.district}
           </p>
 
-          <div className='entry-photos'>
-            {entry.photos.map((photo) => (
-              <img
-                key={photo.id}
-                src={`http://localhost:8080/uploads/${photo.name}`}
-                alt={`Imagen ${photo.id}`}
-              />
-            ))}
-          </div>
-          <p>Creado por: {entry.username}</p>
+          <p>Autor: {entry.username}</p>
           {/* Botón de "like" */}
           <button
             className={`like-button ${liked ? 'liked' : ''}`}
@@ -69,8 +72,9 @@ const SingleEntryPage = () => {
 
           <p>Fecha de creación: {new Date(entry.createdAt).toLocaleString()}</p>
         </div>
+        <Footer />
       </div>
-    </div>
+    </>
   );
 };
 

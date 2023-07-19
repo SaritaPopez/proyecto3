@@ -6,11 +6,10 @@ import HomeSearch from '../home-search/HomeSearch';
 
 import './entriesSearch.css';
 
-
 const EntriesSearch = () => {
   const { entries, searchParams, setSearchParams } = useEntries();
   const [filteredEntries, setFilteredEntries] = useState([]);
-  
+
   useEffect(() => {
     // Aplicar el filtro cuando cambia el valor de 'entries' o la palabra clave en 'searchParams'
     const filtered = entries.filter((entry) => {
@@ -22,7 +21,7 @@ const EntriesSearch = () => {
     });
     setFilteredEntries(filtered);
   }, [entries, searchParams]);
-  
+
   return (
     <main className='entriesSearch'>
       <HomeSearch
@@ -31,7 +30,7 @@ const EntriesSearch = () => {
       />
 
       <ul className='block-container'>
-      {filteredEntries.length > 0 ? (
+        {filteredEntries.length > 0 ? (
           filteredEntries.map((entry) => <Entry key={entry.id} entry={entry} />)
         ) : (
           <li>¡No se ha encontrado ninguna entrada!</li>

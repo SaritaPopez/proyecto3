@@ -1,7 +1,7 @@
 import LoginForm from '../../components/loginForm/LoginForm';
 import useAuth from '../../hooks/useAuth';
 import { Navigate } from 'react-router-dom';
-
+import './loginPage.css';
 const LoginPage = () => {
   const { token, login } = useAuth();
 
