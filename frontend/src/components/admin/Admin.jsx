@@ -27,7 +27,14 @@ const Admin = ({ token }) => {
 
       setLoading(true);
 
-      await entryCreateService(title, city, neightborhood, district, description, token);
+      await entryCreateService(
+        title,
+        city,
+        neightborhood,
+        district,
+        description,
+        token
+      );
 
       // Redireccionamos a la página principal.
       navigate('/');
@@ -46,61 +53,74 @@ const Admin = ({ token }) => {
     <>
       <Header />
       <div className='Admin'>
-          <div className='contaniner1'>
-            <img
-              src='https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-              alt='Imagen de perfil'
-            />
-            <p>Administrador</p>
-            <p>San Diego, Ca</p>
-          </div>
-          <div className='container2'>
-            <p>
-              ¡Haz tu ciudad más <br></br>accesible hoy!
-            </p>
-
-            <form onSubmit={handleSubmit} className='form-container'>
-              <h2>Escribe tu entrada </h2>
-
-              {/* <input type='photo' onChange={(e) => setPhoto(e.target.files[0])} /> */}
-
-              <input className='title' type="text"
-                onChange={(e) => setTitle(e.target.value)}
-                minLength='5'
-                autoFocus
-                required
-              />
-              <input className='city' type="text"
-                onChange={(e) => setCity(e.target.value)}
-                minLength='5'
-                required
-              />
-              <input className='neightborhood' type="text"
-                onChange={(e) => setNeightborhood(e.target.value)}
-                minLength='5'
-                required
-              />
-              <input className='district' type="text"
-                onChange={(e) => setDistrict(e.target.value)}
-                minLength='5'
-                required
-              />
-              <textarea
-                className='description'
-                onChange={(e) => setDescription(e.target.value)}
-                minLength='10'
-                required
-              />
-              
-              <button disabled={loading}>Enviar</button>
-
-              {loading && <Spinner />}
-
-              {errMsg && <ErrorMessage msg={errMsg} />}
-            </form>
-          </div>
+        <div className='contaniner1'>
+          <img
+            src='https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+            alt='Imagen de perfil'
+          />
+          <p>Administrador</p>
+          <p>San Diego, Ca</p>
         </div>
-      <Footer/>
+        <div className='container2'>
+          <p>
+            ¡Haz tu ciudad más <br></br>accesible hoy!
+          </p>
+
+          <form onSubmit={handleSubmit} className='form-container'>
+            <h2>Escribe tu entrada </h2>
+
+            {/* <input type='photo' onChange={(e) => setPhoto(e.target.files[0])} /> */}
+
+            <input
+              className='title'
+              type='text'
+              placeholder='Title'
+              onChange={(e) => setTitle(e.target.value)}
+              minLength='5'
+              autoFocus
+              required
+            />
+            <input
+              className='city'
+              placeholder='Text'
+              type='text'
+              onChange={(e) => setCity(e.target.value)}
+              minLength='5'
+              required
+            />
+            <input
+              className='neightborhood'
+              placeholder='Neightborhood'
+              type='text'
+              onChange={(e) => setNeightborhood(e.target.value)}
+              minLength='5'
+              required
+            />
+            <input
+              className='district'
+              placeholder='District'
+              type='text'
+              onChange={(e) => setDistrict(e.target.value)}
+              minLength='5'
+              required
+            />
+            <textarea
+              className='description'
+              placeholder='Description'
+              onChange={(e) => setDescription(e.target.value)}
+              minLength='10'
+              required
+            />
+
+            <button disabled={loading}>Enviar</button>
+
+            {loading && <Spinner />}
+
+            {errMsg && <ErrorMessage msg={errMsg} />}
+          </form>
+        </div>
+      </div>
+      <Footer />
     </>
   );
 };
