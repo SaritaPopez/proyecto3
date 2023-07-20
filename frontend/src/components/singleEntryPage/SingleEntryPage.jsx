@@ -6,6 +6,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import Footer from '../../components/footer/Footer';
 import Header from '../header/Header';
+import flecha from '../../assets/flecha.png';
+import flechaIzquierda from '../../assets/flechaIzquierda.png';
+
 import './singleentrypage.css';
 
 const SingleEntryPage = () => {
@@ -13,7 +16,7 @@ const SingleEntryPage = () => {
   const { token } = useAuth();
   const [entry, setEntry] = useState(null);
   const [liked, setLiked] = useState(false); // Estado para controlar si se ha dado "like" o no
-
+  const [currentIndex, setCurrentIndex] = useState(0); // Agregar el estado para el índice actual
   useEffect(() => {
     // Hacer la solicitud para obtener la entrada concreta
     const fetchEntry = async () => {
@@ -37,7 +40,17 @@ const SingleEntryPage = () => {
   const handleLike = () => {
     setLiked(!liked);
   };
+  // Función para cambiar al siguiente slide
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % entry.photos.length);
+  };
 
+  // Función para cambiar al slide anterior
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? entry.photos.length - 1 : prevIndex - 1
+    );
+  };
   return (
     <>
       <Header />
@@ -45,14 +58,20 @@ const SingleEntryPage = () => {
         <div className='headertitle'>
           <h2>{entry.title}</h2>
         </div>
-
-        {entry.photos.map((photo) => (
+        <div className='carousel-container'>
+          <button className='carousel-button-iz' onClick={prevSlide}>
+            <img src={flechaIzquierda} alt='flecha icono' />
+          </button>
           <img
-            key={photo.id}
-            src={`http://localhost:8080/uploads/${photo.name}`}
-            alt={`Imagen ${photo.id}`}
+            className='slideImg'
+            src={`http://localhost:8080/uploads/${entry.photos[currentIndex].name}`}
+            alt={`Imagen ${entry.photos[currentIndex].id}`}
           />
-        ))}
+          <button className='carousel-button-de' onClick={nextSlide}>
+            <img src={flecha} alt='flecha icono' />
+          </button>
+        </div>
+
         <div className='blue'>div</div>
         <div className='parrafo'>
           <h4>OVERVIEW</h4>
