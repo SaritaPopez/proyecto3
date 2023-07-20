@@ -12,6 +12,7 @@
     width: 100%;
     height: auto;
     max-height: 400px;
+    max-width: 100%;
   }
 
   .headertitle {
@@ -34,9 +35,12 @@
   .parrafo {
     padding-left: 80px;
     position: absolute;
-    top: 592px; /* Colocar el div "parrafo" debajo del div "headertitle" */
+    top: 552px; /* Colocar el div "parrafo" debajo del div "headertitle" */
     width: 100%;
     font-family: Montserrat, sans-serif;
+  }
+  .parrafo p {
+    padding-right: 120px;
   }
 
   .blue {
@@ -131,4 +135,180 @@ button:hover {
 
 .carousel-button-iz:hover {
   color: #ff0000;
+}
+@media screen and (min-width: 700px) {
+  /* pantallas medianas*/
+  .blue {
+    background-color: rgba(
+      27,
+      182,
+      164,
+      0.59
+    ); /* Color de fondo con transparencia */
+    position: absolute;
+    top: 50%; /* Ajustar la posición del div .blue debajo de .headertitle */
+    height: 100vh;
+    color: transparent;
+    width: 60px;
+  }
+  .carousel-container #imag {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: auto; /* Ajusta la altura deseada para el carrusel */
+  }
+  .parrafo {
+    padding-left: 100px;
+  }
+  .parrafo p {
+    padding-right: 140px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  /* pantallas grandes*/
+  .carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: auto;
+
+    /* Ajusta la altura deseada para el carrusel */
+  }
+  .parrafo {
+    padding-top: 60px;
+    padding-left: 120px;
+  }
+  .headertitle {
+    padding-top: 20px;
+    width: 100vw;
+    height: 114px;
+    color: white;
+    font-family: Montserrat, sans-serif;
+    text-align: center;
+    position: absolute;
+    bottom: 168px;
+    z-index: 1;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.888),
+      rgba(0, 0, 0, 0.99)
+    );
+  }
+  .blue {
+    background-color: rgba(
+      27,
+      182,
+      164,
+      0.59
+    ); /* Color de fondo con transparencia */
+    position: absolute;
+    top: 58%; /* Ajustar la posición del div .blue debajo de .headertitle */
+    height: 100vh;
+    color: transparent;
+    width: 60px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  /* pantallas grandes*/
+  .carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: auto;
+
+    /* Ajusta la altura deseada para el carrusel */
+  }
+  .parrafo {
+    padding-top: 60px;
+    padding-left: 180px;
+    font-size: 18px;
+  }
+  .parrafo p {
+    padding-right: 250px;
+  }
+  .headertitle {
+    padding-top: 10px;
+
+    width: 100vw;
+    height: 114px;
+    color: white;
+    font-size: 30px;
+    font-family: Montserrat, sans-serif;
+    text-align: center;
+    position: absolute;
+    bottom: 178px;
+    z-index: 1;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.888),
+      rgba(0, 0, 0, 0.99)
+    );
+  }
+  .blue {
+    background-color: rgba(
+      27,
+      182,
+      164,
+      0.59
+    ); /* Color de fondo con transparencia */
+    position: absolute;
+    top: 57%; /* Ajustar la posición del div .blue debajo de .headertitle */
+    height: 100vh;
+    color: transparent;
+    width: 100px;
+  }
+}
+@media screen and (min-width: 1300px) {
+  /* pantallas grandes*/
+  .carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: auto;
+  }
+  .parrafo {
+    padding-top: 60px;
+    padding-left: 180px;
+    font-size: 18px;
+  }
+  .parrafo p {
+    padding-right: 250px;
+  }
+  .headertitle {
+    padding-top: 10px;
+
+    width: 100vw;
+    height: 114px;
+    color: white;
+    font-size: 30px;
+    font-family: Montserrat, sans-serif;
+    text-align: center;
+    position: absolute;
+    bottom: 178px;
+    z-index: 1;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.888),
+      rgba(0, 0, 0, 0.99)
+    );
+  }
+  .blue {
+    background-color: rgba(
+      27,
+      182,
+      164,
+      0.59
+    ); /* Color de fondo con transparencia */
+    position: absolute;
+    top: 57%; /* Ajustar la posición del div .blue debajo de .headertitle */
+    height: 100vh;
+    color: transparent;
+    width: 100px;
+  }
 }

@@ -62,11 +62,12 @@ const SingleEntryPage = () => {
           <button className='carousel-button-iz' onClick={prevSlide}>
             <img src={flechaIzquierda} alt='flecha icono' />
           </button>
+
           <img
-            className='slideImg'
             src={`http://localhost:8080/uploads/${entry.photos[currentIndex].name}`}
             alt={`Imagen ${entry.photos[currentIndex].id}`}
           />
+
           <button className='carousel-button-de' onClick={nextSlide}>
             <img src={flecha} alt='flecha icono' />
           </button>
