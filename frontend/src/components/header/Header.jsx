@@ -9,7 +9,9 @@ function Header() {
     <>
       <header>
         <h1>
-          <Link className='linkStyle' to='/'>Ciudad Accesible</Link>
+          <Link className='linkStyle' to='/'>
+            Ciudad Accesible
+          </Link>
         </h1>
         {/* <nav className='navb'>
           {user && <p>@{user.username}</p>}

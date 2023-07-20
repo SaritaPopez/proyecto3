@@ -17,6 +17,7 @@ const SingleEntryPage = () => {
   const [entry, setEntry] = useState(null);
   const [liked, setLiked] = useState(false); // Estado para controlar si se ha dado "like" o no
   const [currentIndex, setCurrentIndex] = useState(0); // Agregar el estado para el índice actual
+
   useEffect(() => {
     // Hacer la solicitud para obtener la entrada concreta
     const fetchEntry = async () => {
@@ -51,9 +52,38 @@ const SingleEntryPage = () => {
       prevIndex === 0 ? entry.photos.length - 1 : prevIndex - 1
     );
   };
+  // Función para marcar el problema como resuelto usando fetch
+  const markResolved = async () => {
+    try {
+      const response = await fetch(
+        `http://localhost:8080/api/entries/${entryId}/resolves`,
+        {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error('Error al marcar como resuelto');
+      }
+
+      // Actualiza el estado local del problema de accesibilidad para reflejar que está resuelto
+      setEntry((prevEntry) => ({
+        ...prevEntry,
+        isResolved: true,
+      }));
+    } catch (error) {
+      console.error('Error al marcar como resuelto:', error);
+    }
+  };
+
   return (
     <>
       <Header />
+
       <div className='single'>
         <div className='headertitle'>
           <h2>{entry.title}</h2>
@@ -94,7 +124,14 @@ const SingleEntryPage = () => {
             <FontAwesomeIcon icon={faHeart} />
             {liked ? entry.likes + 1 : entry.likes}
           </button>
+
+          {!entry.isResolved && (
+            <button className='mark-resolved-button' onClick={markResolved}>
+              Resolver
+            </button>
+          )}
         </div>
+
         <Footer />
       </div>
     </>
