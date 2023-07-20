@@ -2,7 +2,7 @@ import Header from '../header/Header';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
-
+import Footer from '../footer/Footer';
 import entryCreateService from '../../services/createEntryService';
 import Spinner from '../Spinner/Spinner';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
@@ -11,10 +11,15 @@ import './admin.css';
 const Admin = ({ token }) => {
   const navigate = useNavigate();
 
-  const [text, setText] = useState('');
-  const [file, setFile] = useState();
+  const [title, setTitle] = useState('');
+  const [city, setCity] = useState('');
+  const [neightborhood, setNeightborhood] = useState('');
+  const [district, setDistrict] = useState('');
+  const [description, setDescription] = useState('');
+  // const [photo, setPhoto] = useState();
   const [errMsg, setErrMsg] = useState('');
   const [loading, setLoading] = useState(false);
+
   // Función que maneja el envío del formulario.
   const handleSubmit = async (e) => {
     try {
@@ -22,7 +27,7 @@ const Admin = ({ token }) => {
 
       setLoading(true);
 
-      await entryCreateService(text, file, token);
+      await entryCreateService(title, city, neightborhood, district, description, token);
 
       // Redireccionamos a la página principal.
       navigate('/');
@@ -38,16 +43,14 @@ const Admin = ({ token }) => {
   const formattedTime = currentDate.toLocaleTimeString();
 
   return (
-    <div>
+    <>
       <Header />
       <div className='Admin'>
-        <div className='imgProfile'>
           <div className='contaniner1'>
             <img
               src='https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
               alt='Imagen de perfil'
             />
-
             <p>Administrador</p>
             <p>San Diego, Ca</p>
           </div>
@@ -59,16 +62,36 @@ const Admin = ({ token }) => {
             <form onSubmit={handleSubmit} className='form-container'>
               <h2>Escribe tu entrada </h2>
 
-              <textarea
-                className='textarea'
-                value={text}
-                onChange={(e) => setText(e.target.value)}
-                minLength='10'
+              {/* <input type='photo' onChange={(e) => setPhoto(e.target.files[0])} /> */}
+
+              <input className='title' type="text"
+                onChange={(e) => setTitle(e.target.value)}
+                minLength='5'
                 autoFocus
                 required
               />
-              <input type='file' onChange={(e) => setFile(e.target.files[0])} />
-
+              <input className='city' type="text"
+                onChange={(e) => setCity(e.target.value)}
+                minLength='5'
+                required
+              />
+              <input className='neightborhood' type="text"
+                onChange={(e) => setNeightborhood(e.target.value)}
+                minLength='5'
+                required
+              />
+              <input className='district' type="text"
+                onChange={(e) => setDistrict(e.target.value)}
+                minLength='5'
+                required
+              />
+              <textarea
+                className='description'
+                onChange={(e) => setDescription(e.target.value)}
+                minLength='10'
+                required
+              />
+              
               <button disabled={loading}>Enviar</button>
 
               {loading && <Spinner />}
@@ -77,8 +100,8 @@ const Admin = ({ token }) => {
             </form>
           </div>
         </div>
-      </div>
-    </div>
+      <Footer/>
+    </>
   );
 };
 Admin.propTypes = {

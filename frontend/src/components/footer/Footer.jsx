@@ -11,24 +11,24 @@ function Footer() {
       <>
       <div className='container-entries'>
         <Link to='/admin'>
-        <img src='src/assets/mas.png' alt='icono mas' />
+        <img src='../src/assets/mas.png' alt='icono mas' />
         </Link>
       </div>
       <div className='container-home'>
         <Link to="/">
-            <img src='src/assets/home.png' alt='icono casa' />
+            <img src='../src/assets/home.png' alt='icono casa' />
         </Link>
       </div>
       <div className='container-logout'>
       <button className='button-logout' onClick={logout}>
-          <img src='src/assets/logout.png' alt='icono logout' />
+          <img src='../src/assets/logout.png' alt='icono logout' />
         </button>
       </div>
       </>
     ) : (
       <div className='container-home'>
         <Link to="/">
-            <img src='src/assets/home.png' alt='icono casa' />
+            <img src='../src/assets/home.png' alt='icono casa' />
         </Link>
       </div>
       )}

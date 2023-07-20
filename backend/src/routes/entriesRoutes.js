@@ -24,8 +24,10 @@ const userExists = require('../middlewares/userExists');
 const authUserOptional = require('../middlewares/authUserOptional');
 const isAdmin = require('../middlewares/isAdmin');
 
+
 //Nueva entrada
-router.post('/entries', authUser, userExists, isAdmin, newEntry);
+router.post('/entries', authUserOptional, userExists, isAdmin, newEntry);
+
 
 //Obtenemos entrada por ID
 router.get('/entries/:entryId', authUserOptional, getEntry);

@@ -18,6 +18,6 @@ router.post('/users', newUser);
 router.post('/users/login', loginUser);
 
 //Obtener información de mi usuario.
-router.get('/users/:userId', getUser);
+router.get('/users', authUser, userExists, getUser);
 
 module.exports = router;

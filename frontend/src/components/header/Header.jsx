@@ -11,21 +11,9 @@ function Header() {
         <h1>
           <Link className='linkStyle' to='/'>Ciudad Accesible</Link>
         </h1>
-        <nav className='navb'>
+        {/* <nav className='navb'>
           {user && <p>@{user.username}</p>}
-{/* 
-          <>
-            <div className='buttonB'>
-              <Link to='/message'>Mensaje</Link>
-            </div>
-            <div className='buttonBA' onClick={() => logout()}>
-              <img
-                src='https://cdn-icons-png.flaticon.com/512/1250/1250678.png'
-                alt='imagen logout'
-              />
-            </div>
-          </> */}
-        </nav>
+        </nav> */}
       </header>
       <NavBar />
     </>

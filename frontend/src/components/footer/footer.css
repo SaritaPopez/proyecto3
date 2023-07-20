@@ -12,4 +12,5 @@ footer {
 .button-logout {
   border: transparent;
   color: rgb(75, 75, 75);
+  background-color: rgb(244, 243, 243);
 }

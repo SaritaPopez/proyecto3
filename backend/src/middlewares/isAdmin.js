@@ -7,14 +7,14 @@ const isAdmin = async (req, res, next) => {
 
   try {
     connection = await getDB();
-
+    
     const [users] = await connection.query(
       `SELECT role FROM users WHERE id = ?`,
       [req.user.id]
     );
 
     // Lanzamos un error si el usuario no es administrador.
-    if (users[0].role !== 'admin') {
+    if (users[0].role != 'admin') {
       generateError('No tienes suficientes permisos', 401);
     }
 

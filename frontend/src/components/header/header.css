@@ -19,13 +19,12 @@ h1 {
   color: black;
   text-decoration: none;
 }
-.navb {
+/* .navb {
   display: flex;
   justify-content: end;
   align-items: end;
   gap: 1rem;
-  padding-left: 1200px;
-}
+} */
 
 nav > p {
   align-self: center;

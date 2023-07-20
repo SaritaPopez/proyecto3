@@ -10,7 +10,7 @@ const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
   const navigate = useNavigate();
-
+  
   // Obtenemos los datos del usuario si existe un token.
   useEffect(() => {
     const fetchUser = async () => {
