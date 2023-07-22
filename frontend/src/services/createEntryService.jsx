@@ -1,4 +1,4 @@
-const entryCreateService = async (title, city, neightborhood, district, description, photo, token) => {
+const entryCreateService = async (title, city, neightborhood, district, description, token) => {
   // Si queremos enviar un body en formato "form-data" es necesario crear un objeto de este
   // mismo tipo y "pushear" en él los elementos que queremos enviar.
   const formData = new FormData();
@@ -9,7 +9,6 @@ const entryCreateService = async (title, city, neightborhood, district, descript
   formData.append('neightborhood', neightborhood);
   formData.append('district', district);
   formData.append('description', description);
-  formData.append('photo', file);
 
   const res = await fetch('http://localhost:8080/entries', {
     method: 'post',

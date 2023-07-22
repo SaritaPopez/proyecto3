@@ -19,7 +19,6 @@ function LoginForm({ login }) {
       setLoading(true);
 
       const token = await loginService(email, password);
-      console.log(token);
 
       //Si llegamos hasta aqui quiere decir que usuario logueado.Redireccionamos a EntrySearch. Guardamos token en localStorage
       login(token);

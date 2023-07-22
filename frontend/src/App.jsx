@@ -6,7 +6,7 @@ import RegisterPage from './pages/registerPage/RegisterPage';
 import LoginPage from './pages/loginPage/LoginPage';
 import EntryCreatePage from './pages/entryCreatePage/AdminPage';
 import SingleEntryPage from './components/singleEntryPage/SingleEntryPage';
-import Admin from './components/admin/Admin';
+
 
 function App() {
   return (
@@ -17,8 +17,6 @@ function App() {
         <Route path='/login' element={<LoginPage />} />
         <Route path='/message' element={<EntryCreatePage />} />
         <Route path='/entries/:entryId' element={<SingleEntryPage />} />
-        <Route path='/admin' element={<Admin />} />
-
         <Route path='*' element={<NotFoundPage />} />
       </Routes>
     </div>

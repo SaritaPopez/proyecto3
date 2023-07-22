@@ -4,7 +4,7 @@ import Admin from '../../components/admin/Admin';
 
 const AdminPage = () => {
   const { token } = useAuth();
-
+console.log(token)
   // Si la persona NO está logeada la redirigimos a la página principal.
   if (!token) return <Navigate to='/' />;
 

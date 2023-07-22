@@ -43,14 +43,14 @@ const SingleEntryPage = () => {
   };
   // Función para cambiar al siguiente slide
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % entry.photos.length);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % (entry.photos?.length || 1));
   };
 
   // Función para cambiar al slide anterior
   const prevSlide = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? entry.photos.length - 1 : prevIndex - 1
-    );
+    prevIndex === 0 ? ((entry.photos?.length || 1) - 1) : prevIndex - 1
+  );
   };
   // Función para marcar el problema como resuelto usando fetch
   const markResolved = async () => {
@@ -93,10 +93,14 @@ const SingleEntryPage = () => {
             <img src={flechaIzquierda} alt='flecha icono' />
           </button>
 
+          {entry.photos && entry.photos.length > 0 ? (
           <img
             src={`http://localhost:8080/uploads/${entry.photos[currentIndex].name}`}
             alt={`Imagen ${entry.photos[currentIndex].id}`}
           />
+) : (
+  <p>No hay fotos disponibles</p>
+)}
 
           <button className='carousel-button-de' onClick={nextSlide}>
             <img src={flecha} alt='flecha icono' />
@@ -115,7 +119,6 @@ const SingleEntryPage = () => {
 
           <p>Autor: {entry.username}</p>
           <p>Fecha de creación: {new Date(entry.createdAt).toLocaleString()}</p>
-          {/* Botón de "like" */}
 
           <button
             className={`like-button ${liked ? 'liked' : ''}`}

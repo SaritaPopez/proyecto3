@@ -9,6 +9,8 @@ import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import './admin.css';
 
 const Admin = ({ token }) => {
+  console.log(token)
+
   const navigate = useNavigate();
 
   const [title, setTitle] = useState('');
@@ -19,14 +21,14 @@ const Admin = ({ token }) => {
   // const [photo, setPhoto] = useState();
   const [errMsg, setErrMsg] = useState('');
   const [loading, setLoading] = useState(false);
-
+ 
   // Función que maneja el envío del formulario.
   const handleSubmit = async (e) => {
     try {
       e.preventDefault();
 
       setLoading(true);
-
+      
       await entryCreateService(
         title,
         city,
@@ -68,8 +70,6 @@ const Admin = ({ token }) => {
 
           <form onSubmit={handleSubmit} className='form-container'>
             <h2>Escribe tu entrada </h2>
-
-            {/* <input type='photo' onChange={(e) => setPhoto(e.target.files[0])} /> */}
 
             <input
               className='title'
