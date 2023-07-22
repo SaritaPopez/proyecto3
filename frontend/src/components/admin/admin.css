@@ -29,15 +29,14 @@
   margin-bottom: 5rem;
 }
 
-/* Estilo del textarea */
-/* .textarea {
-  background-color: rgb(203, 203, 203);
-  width: 70%;
-  min-height: 100px;
-  padding: 90px;
-  margin-bottom: 20px;
-  border-radius: 20px;
-} */
+.form-container input {
+  border: none;
+  outline: none;
+}
+
+.description {
+  border: none;
+}
 
 .contaniner1 {
   display: flex;
@@ -68,10 +67,7 @@
   height: auto;
   padding-top: 6px; 
 }
-/* .container2 h2 {
-  font-family: Montserrat, sans-serif;
-  color: white;
-} */
+
 
 /* Estilo del botón "Enviar" */
 .form-container button {

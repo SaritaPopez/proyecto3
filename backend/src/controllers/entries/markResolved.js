@@ -19,12 +19,14 @@ const markResolved = async (req, res, next) => {
     }
 
     //Marcamos problema acce como resuelto en la entrada concreta
-    await markAccesibilityResolvedQuery(entryId);
-
+    const resolvedActive = await markAccesibilityResolvedQuery(entryId);
     res.send({
-      status: 'ok',
+      status: 'caca',
       message: 'Problema de accesibilidad marcado como resuelto',
+      data: {resolvedActive},
     });
+    
+    console.log(resolvedActive.resolved)
   } catch (err) {
     next(err);
   }

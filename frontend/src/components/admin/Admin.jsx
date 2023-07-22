@@ -18,7 +18,6 @@ const Admin = ({ token }) => {
   const [neightborhood, setNeightborhood] = useState('');
   const [district, setDistrict] = useState('');
   const [description, setDescription] = useState('');
-  // const [photo, setPhoto] = useState();
   const [errMsg, setErrMsg] = useState('');
   const [loading, setLoading] = useState(false);
  
@@ -69,7 +68,6 @@ const Admin = ({ token }) => {
           </p>
 
           <form onSubmit={handleSubmit} className='form-container'>
-            <h2>Escribe tu entrada </h2>
 
             <input
               className='title'

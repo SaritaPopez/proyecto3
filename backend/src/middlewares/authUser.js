@@ -5,7 +5,7 @@ const { generateError } = require('../services/helpers');
 const authUser = async (req, res, next) => {
   try {
     const { authorization } = req.headers;
-
+console.log(authorization);
     // Si falta el token lanzamos un error.
     if (!authorization) {
       generateError('Falta la cabecera de autenticación', 401);

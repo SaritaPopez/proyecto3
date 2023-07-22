@@ -13,9 +13,9 @@ function Header() {
             Ciudad Accesible
           </Link>
         </h1>
-        {/* <nav className='navb'>
-          {user && <p>@{user.username}</p>}
-        </nav> */}
+        <nav className='navb'>
+          {user && <p className='nameUser'>@{user.username}</p>}
+        </nav>
       </header>
       <NavBar />
     </>

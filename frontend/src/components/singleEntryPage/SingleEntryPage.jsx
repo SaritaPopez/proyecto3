@@ -17,6 +17,7 @@ const SingleEntryPage = () => {
   const [entry, setEntry] = useState(null);
   const [liked, setLiked] = useState(false); // Estado para controlar si se ha dado "like" o no
   const [currentIndex, setCurrentIndex] = useState(0); // Agregar el estado para el índice actual
+  const [resolved, setResolved] = useState(false);
 
   useEffect(() => {
     // Hacer la solicitud para obtener la entrada concreta
@@ -54,22 +55,25 @@ const SingleEntryPage = () => {
   };
   // Función para marcar el problema como resuelto usando fetch
   const markResolved = async () => {
+    
     try {
       const response = await fetch(
-        `http://localhost:8080/api/entries/${entryId}/resolves`,
+        `http://localhost:8080/entries/${entryId}/resolved`,
         {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
-            Authorization: `Bearer ${token}`,
+            Authorization: token,
           },
         }
       );
-
+      const responseData = await response.json();
       if (!response.ok) {
         throw new Error('Error al marcar como resuelto');
       }
-
+      if (responseData.data.resolvedActive.resolved) {
+      setResolved(true);
+      }
       // Actualiza el estado local del problema de accesibilidad para reflejar que está resuelto
       setEntry((prevEntry) => ({
         ...prevEntry,
@@ -128,7 +132,7 @@ const SingleEntryPage = () => {
             {liked ? entry.likes + 1 : entry.likes}
           </button>
 
-          {!entry.isResolved && (
+          {!resolved && (
             <button className='mark-resolved-button' onClick={markResolved}>
               Resolver
             </button>
