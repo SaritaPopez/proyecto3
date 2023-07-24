@@ -72,7 +72,7 @@ const main = async () => {
     console.log('¡Tablas creadas!');
 
     //Encriptamos contraseña administrador
-
+    //123456789aA!
     const hashedPass = await bcrypt.hash('123456789aA!', 10);
 
     await connection.query(

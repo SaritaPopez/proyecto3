@@ -47,7 +47,7 @@ function LoginForm({ login }) {
         id='password'
         value={password}
         onChange={(e) => setPassword(e.target.value)}
-        minLength='8'
+        minLength='6'
         maxLength='100'
         required
       />
