@@ -52,7 +52,7 @@ const Admin = ({ token }) => {
 
   return (
     <>
-      <Header />
+      <Header className='headerNewEntry' />
       <div className='Admin'>
         <div className='contaniner1'>
           <img
@@ -68,19 +68,20 @@ const Admin = ({ token }) => {
           </p>
 
           <form onSubmit={handleSubmit} className='form-container'>
-
+            
             <input
               className='title'
               type='text'
-              placeholder='Title'
+              placeholder='Escribe un título aquí'
               onChange={(e) => setTitle(e.target.value)}
               minLength='5'
               autoFocus
               required
             />
+            <div className='inputsNewEntry'>
             <input
               className='city'
-              placeholder='Text'
+              placeholder='Ciudad'
               type='text'
               onChange={(e) => setCity(e.target.value)}
               minLength='5'
@@ -88,7 +89,7 @@ const Admin = ({ token }) => {
             />
             <input
               className='neightborhood'
-              placeholder='Neightborhood'
+              placeholder='Barrio'
               type='text'
               onChange={(e) => setNeightborhood(e.target.value)}
               minLength='5'
@@ -96,21 +97,22 @@ const Admin = ({ token }) => {
             />
             <input
               className='district'
-              placeholder='District'
+              placeholder='Distrito'
               type='text'
               onChange={(e) => setDistrict(e.target.value)}
               minLength='5'
               required
             />
+            </div>
             <textarea
-              className='description'
-              placeholder='Description'
+              className='descriptionNewEntry'
+              placeholder='Describe tu incidencia aquí...'
               onChange={(e) => setDescription(e.target.value)}
               minLength='10'
               required
             />
 
-            <button disabled={loading}>Enviar</button>
+            <button disabled={loading}>Enviar ↩</button>
 
             {loading && <Spinner />}
 

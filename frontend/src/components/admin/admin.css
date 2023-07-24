@@ -1,7 +1,10 @@
+* {
+  font-family: Montserrat, sans-serif;
+}
+
 .Admin {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   width: 100vw;
   height: 100vh;
@@ -20,9 +23,9 @@
   flex-direction: column;
   align-items: center;
   background-color: white;
-  min-height: 100px;
+  min-height: 6px;
+  height: 12rem;
   border-radius: 20px;
-  font-family: Montserrat, sans-serif;
   width: 90vw;
   border: none;
   box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.175);
@@ -32,10 +35,45 @@
 .form-container input {
   border: none;
   outline: none;
+  text-align: center;
+  font-size: 0.7rem;
 }
 
-.description {
+.inputsNewEntry {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan cuando no caben en una sola fila */
+  justify-content: space-between; /* Ajusta el espacio entre los elementos */
+  align-items: center; /* Alinea los elementos verticalmente en el centro */
+  border-top: 1px solid rgb(197, 195, 195);
+  padding-top: 0.5rem;
+}
+
+.inputsNewEntry > * {
+  max-width: calc(33.33% - 10px); /* Establece un ancho máximo para los elementos (33.33% - 10px de espacio entre elementos) */
+  margin-bottom: 10px; /* Agrega un pequeño espacio entre los elementos */
+}
+
+
+.title {
+  width: 70vw;
+  margin-top: 1rem;
+  height: 2rem;
+  ;
+}
+
+
+.title::placeholder{
+  font-weight: bold;
+  color:black;
+  font-size: 1.2rem;
+}
+
+.descriptionNewEntry {
+  display: block;
+  width: 85vw;
+  margin-top: 1rem;
   border: none;
+  font-size: 0.8rem;
 }
 
 .contaniner1 {
@@ -43,10 +81,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 155px;
+  padding-top: 3rem;
   font-size: 20px;
   font-weight: bold;
-  font-family: Montserrat, sans-serif;
   color: white;
   width: 100vh;
 }
@@ -54,7 +91,6 @@
   text-align: center;
   font-size: 40px;
   font-weight: bold;
-  font-family: Montserrat, sans-serif;
   color: white;
 }
 
@@ -63,7 +99,7 @@
   flex-direction: column;
   align-items: center;
   background-color: rgb(187, 88, 31);
-  width: 100%;
+  width: 100vw;
   height: auto;
   padding-top: 6px; 
 }
@@ -71,24 +107,91 @@
 
 /* Estilo del botón "Enviar" */
 .form-container button {
-  background-color: #4c9baf;
-  color: white;
+  background-color: #ffffff;
+  color: rgb(202, 199, 199);
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-
-  display: inline-block;
+  border-top: 1px solid rgb(197, 195, 195);
 }
 
-/* Estilo del botón "Seleccionar archivo" */
-.form-container input[type='file'] {
-  background-color: #4c9baf;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-right: 500px;
-  display: inline-block;
+@media (min-width: 375px){
+    
+  .form-container input {
+    border: none;
+    outline: none;
+  }
+  
+  .title::placeholder{
+    color:black;
+    font-size: 1rem;
+  }
+
+  .descriptionNewEntry {
+    width: 85vw;
+    margin-top: 1rem;
+    border: none;
+    border-bottom: 1px solid rgb(197, 195, 195);
+  }
+  
+  .contaniner1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Montserrat, sans-serif;
+    color: white;
+    width: 100vh;
+  }
+  .container2 p {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: Montserrat, sans-serif;
+    color: white;
+  }
+  
+  .container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(187, 88, 31);
+    width: 100%;
+    height: auto;
+    padding-top: 6px; 
+  }
+  
+  
+  /* Estilo del botón "Enviar" */
+  .form-container button {
+    background-color: #ffffff;
+    color: rgb(202, 199, 199);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: inline-block;
+  }
 }
+
+@media (min-width: 425px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 1024px) {
+
+}
+
+@media (min-width: 1350px) {
+
+}
+

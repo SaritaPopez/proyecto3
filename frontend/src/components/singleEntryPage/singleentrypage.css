@@ -138,6 +138,19 @@ button:hover {
 .carousel-button-iz:hover {
   color: #ff0000;
 }
+
+/* PENDIENTE Estilo del botón "Seleccionar archivo" */
+.botonseleccionar[type='file'] {
+  background-color: #4c9baf;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 500px;
+  display: inline-block;
+}
+
 @media screen and (min-width: 700px) {
   /* pantallas medianas*/
   .blue {

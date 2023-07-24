@@ -20,9 +20,9 @@ function Footer() {
         </Link>
       </div>
       <div className='container-logout'>
-      <button className='button-logout' onClick={logout}>
+      <Link className='button-logout' onClick={logout}>
           <img src='../src/assets/logout.png' alt='icono logout' />
-        </button>
+        </Link>
       </div>
       </>
     ) : (
