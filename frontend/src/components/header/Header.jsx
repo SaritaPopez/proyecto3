@@ -7,14 +7,14 @@ function Header() {
   const { logout, user } = useAuth();
   return (
     <>
-      <header>
+      <header className='header'>
         <h1>
           <Link className='linkStyle' to='/'>
             Ciudad Accesible
           </Link>
         </h1>
         <nav className='navb'>
-          {user && <p className='nameUser'>@{user.username}</p>}
+          {user && <p className='nameUser'>Hola @{user.username}!</p>}
         </nav>
       </header>
       <NavBar />

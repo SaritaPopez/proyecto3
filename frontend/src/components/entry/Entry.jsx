@@ -7,7 +7,13 @@ import { Link } from 'react-router-dom';
 const Entry = ({ entry, toogleLike, deleteEntry, loading }) => {
   console.log('Nombre de la imagen:', entry.photos[0]?.name);
   return (
-    <Link to={`/entries/${entry.id}`}>
+    <Link
+      className='link'
+      to={`/entries/${entry.id}`}
+      style={{
+        textDecoration: 'none',
+      }}
+    >
       <li className='entry'>
         <EntryHeader username={entry.username} createdAt={entry.createdAt} />
         <EntryBody description={entry.description} photos={entry.photos} />

@@ -1,0 +1,67 @@
+@media screen and (min-width: 480px) {
+  /* pantallas más pequeñas */
+  .imageAdmi {
+    float: right;
+    margin-right: 10px;
+  }
+
+  .imageAdmi img {
+    border-radius: 200px;
+    width: 80px;
+  }
+  .username {
+    font-size: 14px;
+
+    margin-right: 8px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+  time {
+    color: black;
+
+    font-size: 12px;
+    margin-right: 1px;
+    text-decoration: none;
+  }
+}
+@media screen and (min-width: 780px) {
+  /* pantallas medianas */
+  .imageAdmi {
+    float: right;
+    margin-right: 10px;
+  }
+
+  .imageAdmi img {
+    width: 85px;
+  }
+  .username {
+    font-size: 15px;
+  }
+  time {
+    font-size: 13px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  /* pantallas grandes */
+  .imageAdmi {
+    float: right;
+    margin-right: 10px;
+  }
+
+  .imageAdmi img {
+    margin-top: 25px;
+    width: 120px;
+    border-radius: 50%;
+  }
+  .username {
+    padding-right: 270px;
+    padding-left: 10px;
+
+    font-size: 17px;
+  }
+  time {
+    font-size: 15px;
+    margin-right: 20px;
+  }
+}

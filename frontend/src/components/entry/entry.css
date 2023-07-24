@@ -15,9 +15,6 @@
   margin-bottom: 1rem;
 }
 
-.headerEntry {
-  background: hsl(0, 0%, 100%);
-}
 li.entry {
   box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.134);
 }
@@ -26,11 +23,10 @@ li.entry:not(:first-child) {
   margin: 1rem 0;
 }
 
-li.entry > header {
+/*li.entry > header {
   display: flex;
   justify-content: space-around;
- 
-}
+}*/
 
 li.tweet > div {
   display: flex;
