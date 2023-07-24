@@ -13,3 +13,15 @@ main.login > form > input {
   margin-bottom: 1rem;
   padding: 0.3rem;
 }
+label {
+  padding-left: 15px;
+}
+.imgLog img {
+  width: 100%;
+
+  padding-left: 0;
+  height: auto;
+}
+.imgLog {
+  margin-bottom: 20px;
+}

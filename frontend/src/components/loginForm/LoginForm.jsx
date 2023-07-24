@@ -30,6 +30,12 @@ function LoginForm({ login }) {
   };
   return (
     <form onSubmit={handleSubmit}>
+      <div className='imgLog'>
+        <img
+          src='https://images.pexels.com/photos/380283/pexels-photo-380283.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+          alt='fotoLogin'
+        />
+      </div>
       <h2>Login</h2>
       <label htmlFor='email'>Email:</label>
       <input
