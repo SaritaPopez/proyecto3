@@ -19,6 +19,7 @@ function LoginForm({ login }) {
       setLoading(true);
 
       const token = await loginService(email, password);
+      console.log(token);
 
       //Si llegamos hasta aqui quiere decir que usuario logueado.Redireccionamos a EntrySearch. Guardamos token en localStorage
       login(token);
@@ -29,38 +30,38 @@ function LoginForm({ login }) {
     }
   };
   return (
-    <form onSubmit={handleSubmit}>
-      <div className='imgLog'>
-        <img
-          src='https://images.pexels.com/photos/380283/pexels-photo-380283.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-          alt='fotoLogin'
-        />
+    <div className='login-container'>
+      <div className='image-container'>
+        <img src='https://tipsparatuviaje.com/wp-content/uploads/2019/11/rotterdam-ho.jpg' />
       </div>
-      <h2>Login</h2>
-      <label htmlFor='email'>Email:</label>
-      <input
-        type='email'
-        id='email'
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        minLength='8'
-        maxLength='100'
-        required
-      />
-      <label htmlFor='password'>Password:</label>
-      <input
-        type='password'
-        id='password'
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        minLength='6'
-        maxLength='100'
-        required
-      />
-      <button>Loguearse</button>
-      {loading && <Spinner />}
-      {errMess && <ErrorMessage msg={errMess} />}
-    </form>
+
+      <form onSubmit={handleSubmit}>
+        <h2>Login</h2>
+        <label htmlFor='email'>Email: </label>
+        <input
+          type='email'
+          id='email'
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          minLength='8'
+          maxLength='100'
+          required
+        />
+        <label htmlFor='password'>Password:</label>
+        <input
+          type='password'
+          id='password'
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          minLength='8'
+          maxLength='100'
+          required
+        />
+        <button>Loguearse</button>
+        {loading && <Spinner />}
+        {errMess && <ErrorMessage msg={errMess} />}
+      </form>
+    </div>
   );
 }
 
