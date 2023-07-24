@@ -18,7 +18,7 @@
   height: 100%;
 }
 
-form {
+.formLogin {
   width: 80%;
   display: flex;
   max-width: 400px;
@@ -32,14 +32,14 @@ form {
   justify-content: center;
 }
 
-h2 {
+.h2Login {
   font-family: Montserrat, sans-serif;
   color: #fff;
   margin-bottom: 20px;
   text-align: center;
 }
 
-label {
+.labelForm {
   font-family: Montserrat, sans-serif;
   color: #fff;
   display: flex;
@@ -48,7 +48,7 @@ label {
   margin-bottom: 10px;
 }
 
-input {
+.inputLogin {
   border: none;
   border-bottom: 1px solid rgb(255, 255, 255);
   margin-bottom: 2.5rem;
@@ -58,7 +58,16 @@ input {
   font-family: Montserrat, sans-serif;
 }
 
-button {
+.buttonLogin {
+  border-radius: 20px;
+  background-color: rgba(96, 188, 177, 1);
+  font-family: Montserrat, sans-serif;
+  border: solid rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+}
+
+.buttonRegister {
   min-width: 200px;
   max-width: 300px;
   padding: 10px;
@@ -71,7 +80,7 @@ button {
   margin: 0 auto;
 }
 
-button:hover {
+.buttonLogin:hover {
   background-color: #0056b3;
 }
 

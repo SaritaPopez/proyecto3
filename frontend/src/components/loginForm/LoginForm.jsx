@@ -19,7 +19,6 @@ function LoginForm({ login }) {
       setLoading(true);
 
       const token = await loginService(email, password);
-      console.log(token);
 
       //Si llegamos hasta aqui quiere decir que usuario logueado.Redireccionamos a EntrySearch. Guardamos token en localStorage
       login(token);
@@ -35,10 +34,10 @@ function LoginForm({ login }) {
         <img src='https://tipsparatuviaje.com/wp-content/uploads/2019/11/rotterdam-ho.jpg' />
       </div>
 
-      <form onSubmit={handleSubmit}>
-        <h2>Login</h2>
+      <form className='formLogin' onSubmit={handleSubmit}>
+        <h2 className='h2Login'>Login</h2>
         <label htmlFor='email'>Email: </label>
-        <input
+        <input className='inputLogin'
           type='email'
           id='email'
           value={email}
@@ -47,8 +46,8 @@ function LoginForm({ login }) {
           maxLength='100'
           required
         />
-        <label htmlFor='password'>Password:</label>
-        <input
+        <label className='labelForm' htmlFor='password'>Password:</label>
+        <input className='inputLogin'
           type='password'
           id='password'
           value={password}
@@ -57,7 +56,7 @@ function LoginForm({ login }) {
           maxLength='100'
           required
         />
-        <button>Loguearse</button>
+        <button className='buttonLogin' >Loguearse</button>
         {loading && <Spinner />}
         {errMess && <ErrorMessage msg={errMess} />}
       </form>

@@ -22,11 +22,4 @@ main.register > form > input {
   background-color: rgba(96, 188, 177, 1);
 }
 
-button {
-  border-radius: 20px;
-  background-color: rgba(96, 188, 177, 1);
-  font-family: Montserrat, sans-serif;
-  border: solid rgb(255, 255, 255);
-  color: rgb(255, 255, 255);
-  padding: 10px 20px;
-}
+

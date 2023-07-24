@@ -41,16 +41,16 @@
 
 .inputsNewEntry {
   display: flex;
-  flex-wrap: wrap; /* Permite que los elementos se envuelvan cuando no caben en una sola fila */
-  justify-content: space-between; /* Ajusta el espacio entre los elementos */
-  align-items: center; /* Alinea los elementos verticalmente en el centro */
+  flex-wrap: wrap; 
+  justify-content: space-between; 
+  align-items: center; 
   border-top: 1px solid rgb(197, 195, 195);
   padding-top: 0.5rem;
 }
 
 .inputsNewEntry > * {
-  max-width: calc(33.33% - 10px); /* Establece un ancho máximo para los elementos (33.33% - 10px de espacio entre elementos) */
-  margin-bottom: 10px; /* Agrega un pequeño espacio entre los elementos */
+  max-width: calc(33.33% - 10px); 
+  margin-bottom: 10px; 
 }
 
 
@@ -100,7 +100,6 @@
   align-items: center;
   background-color: rgb(187, 88, 31);
   width: 100vw;
-  height: auto;
   padding-top: 6px; 
 }
 
@@ -116,7 +115,7 @@
   border-top: 1px solid rgb(197, 195, 195);
 }
 
-@media (min-width: 375px){
+@media screen and (min-width: 375px){
     
   .form-container input {
     border: none;
@@ -155,17 +154,6 @@
     color: white;
   }
   
-  .container2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgb(187, 88, 31);
-    width: 100%;
-    height: auto;
-    padding-top: 6px; 
-  }
-  
-  
   /* Estilo del botón "Enviar" */
   .form-container button {
     background-color: #ffffff;
@@ -187,11 +175,25 @@
 
 }
 
-@media (min-width: 1024px) {
+@media  screen and (min-width: 1024px) {
 
+  .form-container {
+    width: 70vw;
+  }
+  .title {
+    width: 55vw;
+    margin-top: 1rem;
+    height: 2rem;
+    ;
+  }
+  
+  .descriptionNewEntry {
+    display: block;
+    width: 65vw;
+    margin-top: 1rem;
+    border: none;
+    font-size: 0.8rem;
+  }
 }
 
-@media (min-width: 1350px) {
-
-}
 

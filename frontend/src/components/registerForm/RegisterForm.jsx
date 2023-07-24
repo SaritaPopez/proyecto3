@@ -37,10 +37,10 @@ function RegisterForm() {
         <img src='https://tipsparatuviaje.com/wp-content/uploads/2019/11/rotterdam-ho.jpg' />
       </div>
 
-      <form onSubmit={handleSubmit}>
-        <h2>Registro</h2>
-        <label htmlFor='username'>User:</label>
-        <input
+      <form className='formLogin' onSubmit={handleSubmit}>
+        <h2 className='h2Login'>Registro</h2>
+        <label className='labelForm' htmlFor='username'>User:</label>
+        <input className='inputLogin'
           type='text'
           id='username'
           value={username}
@@ -49,8 +49,8 @@ function RegisterForm() {
           autoFocus
           required
         />
-        <label htmlFor='email'>Email:</label>
-        <input
+        <label className='labelForm' htmlFor='email'>Email:</label>
+        <input className='inputLogin'
           type='email'
           id='email'
           value={email}
@@ -59,8 +59,8 @@ function RegisterForm() {
           maxLength='100'
           required
         />
-        <label htmlFor='password'>Password:</label>
-        <input
+        <label className='labelForm' htmlFor='password'>Password:</label>
+        <input className='inputLogin'
           type='password'
           id='password'
           value={password}
@@ -69,7 +69,7 @@ function RegisterForm() {
           maxLength='100'
           required
         />
-        <button>Registrarse</button>
+        <button className='buttonLogin' >Registrarse</button>
         {loading && <Spinner />}
         {errMess && <ErrorMessage msg={errMess} />}
       </form>
