@@ -32,43 +32,50 @@ function RegisterForm() {
     }
   };
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Registro</h2>
-      <label htmlFor='username'>User:</label>
-      <input
-        type='text'
-        id='username'
-        value={username}
-        onChange={(e) => setUserName(e.target.value)}
-        minLength='5'
-        autoFocus
-        required
-      />
-      <label htmlFor='email'>Email:</label>
-      <input
-        type='email'
-        id='email'
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        minLength='8'
-        maxLength='100'
-        required
-      />
-      <label htmlFor='password'>Password:</label>
-      <input
-        type='password'
-        id='password'
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        minLength='8'
-        maxLength='100'
-        required
-      />
-      <button>Registrarse</button>
-      {loading && <Spinner />}
-      {errMess && <ErrorMessage msg={errMess} />}
-    </form>
+    <div className='login-container'>
+      <div className='image-container'>
+        <img src='https://tipsparatuviaje.com/wp-content/uploads/2019/11/rotterdam-ho.jpg' />
+      </div>
+
+      <form onSubmit={handleSubmit}>
+        <h2>Registro</h2>
+        <label htmlFor='username'>User:</label>
+        <input
+          type='text'
+          id='username'
+          value={username}
+          onChange={(e) => setUserName(e.target.value)}
+          minLength='5'
+          autoFocus
+          required
+        />
+        <label htmlFor='email'>Email:</label>
+        <input
+          type='email'
+          id='email'
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          minLength='8'
+          maxLength='100'
+          required
+        />
+        <label htmlFor='password'>Password:</label>
+        <input
+          type='password'
+          id='password'
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          minLength='8'
+          maxLength='100'
+          required
+        />
+        <button>Registrarse</button>
+        {loading && <Spinner />}
+        {errMess && <ErrorMessage msg={errMess} />}
+      </form>
+    </div>
   );
 }
 
 export default RegisterForm;
+
