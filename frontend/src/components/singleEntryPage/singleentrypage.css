@@ -35,12 +35,13 @@
   .parrafo {
     padding-left: 80px;
     position: absolute;
-    top: 552px; /* Colocar el div "parrafo" debajo del div "headertitle" */
+    top: 445px; /* Colocar el div "parrafo" debajo del div "headertitle" */
     width: 100%;
     font-family: Montserrat, sans-serif;
   }
   .parrafo p {
     padding-right: 120px;
+    font-size: 13px;
   }
 
   .blue {
@@ -52,6 +53,7 @@
     ); /* Color de fondo con transparencia */
     position: absolute;
     top: 50%; /* Ajustar la posición del div .blue debajo de .headertitle */
+    padding-bottom: 40px;
     height: 100vh;
     color: transparent;
     width: 40px;
@@ -165,6 +167,7 @@ button:hover {
   }
   .parrafo p {
     padding-right: 140px;
+    font-size: 14px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -184,8 +187,11 @@ button:hover {
     /* Ajusta la altura deseada para el carrusel */
   }
   .parrafo {
-    padding-top: 60px;
+    padding-top: 120px;
     padding-left: 120px;
+  }
+  .parrafo p {
+    font-size: 16px;
   }
   .headertitle {
     padding-top: 20px;
@@ -257,7 +263,7 @@ button:hover {
     height: auto;
   }
   .parrafo {
-    padding-top: 60px;
+    padding-top: 90px;
     padding-left: 180px;
     font-size: 18px;
   }

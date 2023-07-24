@@ -12,17 +12,18 @@
   }
 
   h1 {
-    font-size: 20px;
+    font-size: 22px;
     font-family: Montserrat, sans-serif;
     position: absolute;
     color: black;
     text-decoration: none;
   }
   .nameUser {
-    font-size: 13px;
     margin-top: 20px;
-    margin-left: 355px;
+    margin-left: 325px;
     font-family: Montserrat, sans-serif;
+    font-weight: lighter;
+    font-size: 12px;
   }
 
   nav > p {
@@ -39,17 +40,15 @@
   /* pantallas medianas */
 
   h1 {
-    font-size: 25px;
+    font-size: 22px;
     font-family: Montserrat, sans-serif;
     position: absolute;
     color: black;
     text-decoration: none;
   }
   .nameUser {
-    font-size: 16px;
-
     margin-top: 20px;
-    margin-left: 525px;
+    margin-left: 325px;
     font-family: Montserrat, sans-serif;
   }
 }
