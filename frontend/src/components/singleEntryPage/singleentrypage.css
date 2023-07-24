@@ -168,6 +168,11 @@ button:hover {
   }
 }
 @media screen and (min-width: 1024px) {
+  .single img {
+    padding-left: 10%;
+    width: 80%;
+    height: auto;
+  }
   /* pantallas grandes*/
   .carousel-container {
     display: flex;
@@ -211,60 +216,39 @@ button:hover {
     color: transparent;
     width: 60px;
   }
-}
-@media screen and (min-width: 1024px) {
-  /* pantallas grandes*/
-  .carousel-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100vw;
-    height: auto;
+  .carousel-button-de {
+    margin-left: 80%;
+    width: 50px;
+  }
 
-    /* Ajusta la altura deseada para el carrusel */
-  }
-  .parrafo {
-    padding-top: 60px;
-    padding-left: 180px;
-    font-size: 18px;
-  }
-  .parrafo p {
-    padding-right: 250px;
-  }
-  .headertitle {
-    padding-top: 10px;
-
-    width: 100vw;
-    height: 114px;
-    color: white;
-    font-size: 30px;
-    font-family: Montserrat, sans-serif;
-    text-align: center;
-    position: absolute;
-    bottom: 178px;
-    z-index: 1;
-    background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.888),
-      rgba(0, 0, 0, 0.99)
-    );
-  }
-  .blue {
-    background-color: rgba(
-      27,
-      182,
-      164,
-      0.59
-    ); /* Color de fondo con transparencia */
-    position: absolute;
-    top: 57%; /* Ajustar la posición del div .blue debajo de .headertitle */
-    height: 100vh;
-    color: transparent;
-    width: 100px;
+  .carousel-button-iz {
+    margin-left: 14.5%;
   }
 }
+
 @media screen and (min-width: 1300px) {
   /* pantallas grandes*/
+
+  .carousel-button-de {
+    margin-left: 77%;
+    width: 50px;
+  }
+
+  .carousel-button-de:hover {
+    color: #ff0000;
+  }
+  .carousel-button-iz {
+    margin-left: 18.5%;
+  }
+
+  .carousel-button-iz:hover {
+    color: #ff0000;
+  }
+  .single img {
+    padding-left: 17%;
+    width: 65%;
+    height: auto;
+  }
   .carousel-container {
     display: flex;
     align-items: center;
