@@ -1,3 +1,18 @@
+@media screen and (min-width: 375px) {
+  /* pantallas muy pequeñas */
+  .description {
+    text-align: left;
+    color: black;
+    margin-left: 10%;
+    font-size: 13px;
+  }
+  .phot img {
+    width: 40vh;
+    padding-bottom: 10px;
+    padding-left: 1%;
+  }
+}
+
 @media screen and (min-width: 480px) {
   /* pantallas más pequeñas */
   .description {

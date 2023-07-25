@@ -1,3 +1,32 @@
+@media screen and (min-width: 375px) {
+  /* pantallas muy pequeñas */
+  .imageAdmi {
+    float: right;
+    margin-right: 2px;
+    margin-left: 10px;
+  }
+
+  .imageAdmi img {
+    border-radius: 200px;
+    width: 80px;
+  }
+  .username {
+    font-size: 12px;
+
+    margin-right: 4px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+  time {
+    color: black;
+
+    font-size: 10px;
+    margin-right: 1px;
+    text-decoration: none;
+  }
+}
+
 @media screen and (min-width: 480px) {
   /* pantallas más pequeñas */
   .imageAdmi {
