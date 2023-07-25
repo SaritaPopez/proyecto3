@@ -68,7 +68,7 @@ const Admin = ({ token }) => {
           </p>
 
           <form onSubmit={handleSubmit} className='form-container'>
-            
+            <div className='titleFormNewEntry' >
             <input
               className='title'
               type='text'
@@ -78,6 +78,7 @@ const Admin = ({ token }) => {
               autoFocus
               required
             />
+            </div>
             <div className='inputsNewEntry'>
             <input
               className='city'
@@ -112,7 +113,7 @@ const Admin = ({ token }) => {
               required
             />
 
-            <button disabled={loading}>Enviar ↩</button>
+            <button disabled={loading}>Publicar ↩</button>
 
             {loading && <Spinner />}
 

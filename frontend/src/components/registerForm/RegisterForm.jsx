@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Spinner from '../Spinner/Spinner';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import registerService from '../../services/registerService';
@@ -34,7 +35,10 @@ function RegisterForm() {
   return (
     <div className='login-container'>
       <div className='image-container'>
-        <img src='https://tipsparatuviaje.com/wp-content/uploads/2019/11/rotterdam-ho.jpg' />
+         <img className='imagenCiudad' src='https://tipsparatuviaje.com/wp-content/uploads/2019/11/rotterdam-ho.jpg' />
+        <Link className='logoWeb' to="/">
+            <img className='logoGoHome' src='../src/assets/home.png' alt='icono casa' />
+        </Link>
       </div>
 
       <form className='formLogin' onSubmit={handleSubmit}>

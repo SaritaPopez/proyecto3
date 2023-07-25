@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Spinner from '../Spinner/Spinner';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
@@ -31,7 +32,10 @@ function LoginForm({ login }) {
   return (
     <div className='login-container'>
       <div className='image-container'>
-        <img src='https://tipsparatuviaje.com/wp-content/uploads/2019/11/rotterdam-ho.jpg' />
+        <img className='imagenCiudad' src='https://tipsparatuviaje.com/wp-content/uploads/2019/11/rotterdam-ho.jpg' />
+        <Link className='logoWeb' to="/">
+            <img className='logoGoHome' src='../src/assets/home.png' alt='icono casa' />
+        </Link>
       </div>
 
       <form className='formLogin' onSubmit={handleSubmit}>
