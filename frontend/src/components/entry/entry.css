@@ -93,7 +93,12 @@
     }
   }
 }
-
+@media screen and (min-width: 600px) {
+  /* pantallas más pequeñas */
+  .entry {
+    margin-left: 3%;
+  }
+}
 .entry {
   padding-bottom: 10px;
   font-family: Montserrat, sans-serif;

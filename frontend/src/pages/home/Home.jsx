@@ -11,7 +11,7 @@ function Home() {
       <Header />
       <section className='section-home'>
         <h2>Discover your City</h2>
-        <p>Discover fun new cities below</p>
+        <p>Discover accesible cities below</p>
       </section>
       <EntriesSearch />
 
