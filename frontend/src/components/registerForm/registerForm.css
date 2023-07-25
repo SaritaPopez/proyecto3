@@ -1,8 +1,9 @@
-main.register {
+/* main.register {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 2rem;
+  background-color: rgb(20, 38, 56) ;
 }
 main.register > form {
   display: flex;
@@ -12,4 +13,4 @@ main.register > form {
 main.register > form > input {
   margin-bottom: 1rem;
   padding: 0.3rem;
-}
+} */
