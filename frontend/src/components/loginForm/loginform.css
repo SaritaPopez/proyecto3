@@ -34,10 +34,12 @@
   top: 9rem;
   transform: translate(-50%, -50%);
   z-index: 1;
+  width: 50vw;
+  height: 10vh;
 }
 
 .formLogin {
-  width: 80%;
+  width: 60vw;
   display: flex;
   max-width: 400px;
   color: #fff;
@@ -99,7 +101,8 @@
 }
 
 .buttonLogin:hover {
-  background-color: #0056b3;
+  background-color: #3be8e865;
+  color: rgb(20, 38, 56);
 }
 
 /* Estilos para el mensaje de error */

@@ -34,13 +34,13 @@ function LoginForm({ login }) {
       <div className='image-container'>
         <img className='imagenCiudad' src='https://tipsparatuviaje.com/wp-content/uploads/2019/11/rotterdam-ho.jpg' />
         <Link className='logoWeb' to="/">
-            <img className='logoGoHome' src='../src/assets/home.png' alt='icono casa' />
+            <img className='logoGoHome' src='../src/assets/C-A.png' alt='icono casa' />
         </Link>
       </div>
 
       <form className='formLogin' onSubmit={handleSubmit}>
         <h2 className='h2Login'>Login</h2>
-        <label htmlFor='email'>Email: </label>
+        <label className='labelForm' htmlFor='email'>Email: </label>
         <input className='inputLogin'
           type='email'
           id='email'

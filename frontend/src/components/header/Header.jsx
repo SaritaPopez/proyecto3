@@ -8,11 +8,9 @@ function Header() {
   return (
     <>
       <header className='headerr'>
-        <h1 className='entryh1'>
           <Link className='linkStyle' to='/'>
-            Ciudad Accesible
+          <img className='imgHeader' src='../src/assets/C-A.png' alt='logo web' />
           </Link>
-        </h1>
 
         <nav className='navb'>
           {user && <p className='nameUser'>Hi @{user.username}!</p>}

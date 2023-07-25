@@ -1,5 +1,17 @@
 @media screen and (min-width: 375px) {
   /* pantallas muy pequeñas */
+
+  .headerEntryWrapper{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-decoration: none;
+  }
+
   .imageAdmi {
     float: right;
     margin-right: 2px;
