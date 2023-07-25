@@ -14,7 +14,7 @@ const Entry = ({ entry, toogleLike, deleteEntry, loading }) => {
         textDecoration: 'none',
       }}
     >
-      <li className='entry'>
+      <li className={`entry ${entry.resolved ? 'resolved' : ''}`}>
         <EntryHeader username={entry.username} createdAt={entry.createdAt} />
         <EntryBody description={entry.description} photos={entry.photos} />
         <EntryFooter

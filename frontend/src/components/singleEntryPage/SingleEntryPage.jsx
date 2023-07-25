@@ -44,18 +44,20 @@ const SingleEntryPage = () => {
   };
   // Función para cambiar al siguiente slide
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % (entry.photos?.length || 1));
+    setCurrentIndex(
+      (prevIndex) => (prevIndex + 1) % (entry.photos?.length || 1)
+    );
   };
 
   // Función para cambiar al slide anterior
   const prevSlide = () => {
     setCurrentIndex((prevIndex) =>
-    prevIndex === 0 ? ((entry.photos?.length || 1) - 1) : prevIndex - 1
-  );
+      prevIndex === 0 ? (entry.photos?.length || 1) - 1 : prevIndex - 1
+    );
   };
   // Función para marcar el problema como resuelto usando fetch
   const markResolved = async () => {
-    
+    console.log('Token:', token);
     try {
       const response = await fetch(
         `http://localhost:8080/entries/${entryId}/resolved`,
@@ -71,13 +73,14 @@ const SingleEntryPage = () => {
       if (!response.ok) {
         throw new Error('Error al marcar como resuelto');
       }
-      if (responseData.data.resolvedActive.resolved) {
-      setResolved(true);
+      if (responseData.data.resolved) {
+        setResolved(true);
       }
+      console.log('Headers:', headers);
       // Actualiza el estado local del problema de accesibilidad para reflejar que está resuelto
       setEntry((prevEntry) => ({
         ...prevEntry,
-        isResolved: true,
+        resolved: true,
       }));
     } catch (error) {
       console.error('Error al marcar como resuelto:', error);
@@ -98,13 +101,13 @@ const SingleEntryPage = () => {
           </button>
 
           {entry.photos && entry.photos.length > 0 ? (
-          <img
-            src={`http://localhost:8080/uploads/${entry.photos[currentIndex].name}`}
-            alt={`Imagen ${entry.photos[currentIndex].id}`}
-          />
-) : (
-  <p>No hay fotos disponibles</p>
-)}
+            <img
+              src={`http://localhost:8080/uploads/${entry.photos[currentIndex].name}`}
+              alt={`Imagen ${entry.photos[currentIndex].id}`}
+            />
+          ) : (
+            <p>No hay fotos disponibles</p>
+          )}
 
           <button className='carousel-button-de' onClick={nextSlide}>
             <img src={flecha} alt='flecha icono' />
