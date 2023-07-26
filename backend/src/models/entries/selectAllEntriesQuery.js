@@ -20,6 +20,7 @@ const selectAllEntriesQuery = async (keyword = '', userId = 0) => {
                 E.userId,
                 E.userId = ? AS owner,
                 COUNT(L.id) AS likes,
+                BIT_OR(IFNULL(L.userId = ?, 0)) AS likedByMe,
                 E.createdAt
             FROM entries E
             INNER JOIN users U ON U.id = E.userId
@@ -27,7 +28,7 @@ const selectAllEntriesQuery = async (keyword = '', userId = 0) => {
             GROUP BY E.id
             ORDER BY E.createdAt DESC
         `,
-      [userId]
+      [userId, userId]
     );
 
     // Si el array de entradas tiene alguna entrada obtenemos sus fotos y convertimos
