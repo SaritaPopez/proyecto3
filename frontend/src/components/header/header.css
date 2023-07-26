@@ -11,9 +11,10 @@
     text-decoration: none;
   }
 
-  .imgHeader{
+  .imgHeader {
     margin-top: 0.7rem;
     width: 60vw;
+    height: 5vh;
   }
 
   h1 {
@@ -24,7 +25,7 @@
     font-weight: lighter;
     font-size: 12px;
   }
-  
+
   nav > p {
     align-self: center;
     font-weight: bold;
@@ -41,4 +42,18 @@
   h1 {
     position: absolute;
   }
+}
+
+@media screen and (min-width: 1100px) {
+  /* pantallas medianas */
+
+  h1 {
+    position: absolute;
+  }
+}
+
+.imgHeader {
+  margin-top: 1.5rem;
+  width: 70vw;
+  height: 15vh;
 }

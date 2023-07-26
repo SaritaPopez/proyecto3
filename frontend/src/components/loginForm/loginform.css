@@ -1,5 +1,5 @@
 .login {
-  background-color: rgb(20, 38, 56) ;
+  background-color: rgb(20, 38, 56);
 }
 
 .login-container {
@@ -20,7 +20,7 @@
 
 .imagenCiudad {
   width: 100%;
-  height: 50%;
+  height: 30%;
   z-index: 0;
 }
 
@@ -34,8 +34,8 @@
   top: 9rem;
   transform: translate(-50%, -50%);
   z-index: 1;
-  width: 50vw;
-  height: 10vh;
+  width: 40vw;
+  height: 5vh;
 }
 
 .formLogin {
@@ -111,4 +111,3 @@
   font-size: 14px;
   margin-top: 5px;
 }
-

@@ -39,7 +39,7 @@
   font-size: 0.7rem;
 }
 
-.titleFormNewEntry{
+.titleFormNewEntry {
   border-bottom: 1px solid rgb(197, 195, 195);
   width: 85vw;
   text-align: center;
@@ -53,20 +53,20 @@
 
 .inputsNewEntry {
   display: flex;
-  flex-wrap: wrap; 
-  justify-content: space-between; 
-  align-items: center; 
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
   padding-top: 0.5rem;
 }
 
 .inputsNewEntry > * {
-  max-width: calc(33.33% - 10px); 
-  margin-bottom: 10px; 
+  max-width: calc(33.33% - 10px);
+  margin-bottom: 10px;
 }
 
-.title::placeholder{
+.title::placeholder {
   font-weight: bold;
-  color:black;
+  color: black;
   font-size: 1.2rem;
 }
 
@@ -104,9 +104,8 @@
   align-items: center;
   background-color: rgb(187, 88, 31);
   width: 100vw;
-  padding-top: 6px; 
+  padding-top: 6px;
 }
-
 
 /* Estilo del botón "Publicar" */
 .form-container button {
@@ -119,15 +118,14 @@
   border-top: 1px solid rgb(197, 195, 195);
 }
 
-@media screen and (min-width: 375px){
-    
+@media screen and (min-width: 375px) {
   .form-container input {
     border: none;
     outline: none;
   }
-  
-  .title::placeholder{
-    color:black;
+
+  .title::placeholder {
+    color: black;
     font-size: 1rem;
   }
 
@@ -137,7 +135,7 @@
     border: none;
     border-bottom: 1px solid rgb(197, 195, 195);
   }
-  
+
   .contaniner1 {
     display: flex;
     flex-direction: column;
@@ -157,7 +155,7 @@
     font-family: Montserrat, sans-serif;
     color: white;
   }
-  
+
   /* Estilo del botón "Enviar" */
   .form-container button {
     background-color: #ffffff;
@@ -171,8 +169,7 @@
   }
 }
 
-@media  screen and (min-width: 1024px) {
-
+@media screen and (min-width: 1024px) {
   .form-container {
     width: 70vw;
   }
@@ -180,9 +177,8 @@
     width: 55vw;
     margin-top: 1rem;
     height: 2rem;
-    ;
   }
-  
+
   .descriptionNewEntry {
     display: block;
     width: 65vw;
@@ -191,5 +187,3 @@
     font-size: 0.8rem;
   }
 }
-
-
