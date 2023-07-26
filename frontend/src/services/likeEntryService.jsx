@@ -1,6 +1,4 @@
-const likeEntryService = async (entryId, likedByMe, token) => {
-  // Definimos si vamos a eliminar o a crear el like.
-  const method = likedByMe ? 'delete' : 'post';
+const likeEntryService = async (entryId, method, token) => {
 
   const res = await fetch(`http://localhost:8080/entries/${entryId}/likes`, {
     method,

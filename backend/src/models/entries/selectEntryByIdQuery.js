@@ -21,6 +21,7 @@ const selectEntryByIdQuery = async (entryId, userId = 0) => {
                 E.userId,
                 E.userId = ? AS owner,
                 COUNT(L.id) AS likes,
+                BIT_OR(IFNULL(L.userId = ?, 0)) AS likedByMe,
                 E.createdAt
             FROM entries E
             INNER JOIN users U ON U.id = E.userId
@@ -29,7 +30,7 @@ const selectEntryByIdQuery = async (entryId, userId = 0) => {
             GROUP BY E.id
             ORDER BY E.createdAt DESC
         `,
-      [userId, entryId]
+      [userId, userId, entryId]
     );
 
     // En la linea 23 mostramos cuantos likes tiene la entrada.
