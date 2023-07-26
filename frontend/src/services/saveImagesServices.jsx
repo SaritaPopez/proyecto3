@@ -11,9 +11,9 @@ const saveImagesService = async (entryId, token, images) => {
   });
 
   const requestOptions = {
-    method: 'POST',
+    method: 'post',
     headers: {
-      // (autorizacion del token?)
+      Authorization: token,
     },
     body: formData,
   };
