@@ -155,10 +155,10 @@ const SingleEntryPage = () => {
             </p>
           </div>
           <p>Autor: {entry.username}</p>
-          
+
           {/* <button onClick={saveImages}>Guardar Imágenes</button>
           <p>Fecha de creación: {new Date(entry.createdAt).toLocaleString()}</p> */}
-          
+
           <FontAwesomeIcon
             icon={faHeart}
             className={`like-button ${entry.likedByMe ? 'liked' : ''}`}
