@@ -334,17 +334,17 @@
     top: 56%;
   }
 }
-@media screen and (min-width: 1127px) {
+@media screen and (min-width: 1150px) {
   .login {
     background-color: rgb(20, 38, 56);
+    display: flex; /* Agregamos display: flex; para activar el contenedor como flexbox */
+    align-items: center; /* Centra verticalmente los elementos en el contenedor */
+    justify-content: center; /* Centra horizontalmente los elementos en el contenedor */
+    min-height: 100vh;
   }
 
   .login-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+    /* No es necesario agregar align-items y justify-content aquí, ya que se heredará de .login */
     background-color: rgba(20, 38, 56);
   }
 
