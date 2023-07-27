@@ -5,7 +5,7 @@ import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import registerService from '../../services/registerService';
 import { useNavigate } from 'react-router-dom';
 
-import './registerForm.css';
+import '../loginForm/loginform.css';
 
 function RegisterForm() {
   const navigate = useNavigate();
@@ -35,17 +35,27 @@ function RegisterForm() {
   return (
     <div className='login-container'>
       <div className='image-container'>
-         <img className='imagenCiudad' src='https://tipsparatuviaje.com/wp-content/uploads/2019/11/rotterdam-ho.jpg' />
-        <Link className='logoWeb' to="/">
-            <img className='logoGoHome' src='../src/assets/C-A_white.png' alt='logo web' />
-            <h1 className='h1LoginRegister' >Ciudad Accesible</h1>
+        <img
+          className='imagenCiudad'
+          src='https://tipsparatuviaje.com/wp-content/uploads/2019/11/rotterdam-ho.jpg'
+        />
+        <Link className='logoWeb' to='/'>
+          <img
+            className='logoGoHome'
+            src='../src/assets/C-A.svg'
+            alt='logo web'
+          />
+          <h1 className='h1LoginRegister'>Ciudad Accesible</h1>
         </Link>
       </div>
 
       <form className='formLogin' onSubmit={handleSubmit}>
         <h2 className='h2Login'>Registro</h2>
-        <label className='labelForm' htmlFor='username'>User:</label>
-        <input className='inputLogin'
+        <label className='labelForm' htmlFor='username'>
+          User:
+        </label>
+        <input
+          className='inputLogin'
           type='text'
           id='username'
           value={username}
@@ -54,8 +64,11 @@ function RegisterForm() {
           autoFocus
           required
         />
-        <label className='labelForm' htmlFor='email'>Email:</label>
-        <input className='inputLogin'
+        <label className='labelForm' htmlFor='email'>
+          Email:
+        </label>
+        <input
+          className='inputLogin'
           type='email'
           id='email'
           value={email}
@@ -64,8 +77,11 @@ function RegisterForm() {
           maxLength='100'
           required
         />
-        <label className='labelForm' htmlFor='password'>Password:</label>
-        <input className='inputLogin'
+        <label className='labelForm' htmlFor='password'>
+          Password:
+        </label>
+        <input
+          className='inputLogin'
           type='password'
           id='password'
           value={password}
@@ -74,7 +90,7 @@ function RegisterForm() {
           maxLength='100'
           required
         />
-        <button className='buttonLogin' >Registrarse</button>
+        <button className='buttonLogin'>Registrarse</button>
         {loading && <Spinner />}
         {errMess && <ErrorMessage msg={errMess} />}
       </form>
@@ -83,4 +99,3 @@ function RegisterForm() {
 }
 
 export default RegisterForm;
-
