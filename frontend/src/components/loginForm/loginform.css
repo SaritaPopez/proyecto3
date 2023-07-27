@@ -45,7 +45,7 @@
     align-items: center;
     justify-content: center;
     position: absolute;
-    color: #ffa600;
+    color: #ffffff;
     top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -53,7 +53,7 @@
   }
 
   .formLogin {
-    width: 60vw;
+    width: 50vw;
     display: flex;
     max-width: 400px;
     color: #fff;
@@ -69,11 +69,15 @@
   .h2Login {
     font-family: Montserrat, sans-serif;
     color: #fff;
+    font-size: 15px;
+
     margin-bottom: 20px;
     text-align: center;
   }
 
   .labelForm {
+    font-size: 12px;
+
     font-family: Montserrat, sans-serif;
     color: #fff;
     display: flex;
@@ -83,6 +87,8 @@
   }
 
   .inputLogin {
+    font-size: 12px;
+
     border: none;
     border-bottom: 1px solid rgb(255, 255, 255);
     margin-bottom: 2.5rem;
@@ -93,6 +99,7 @@
   }
 
   .buttonLogin {
+    font-size: 12px;
     border-radius: 20px;
     background-color: rgba(20, 38, 56);
     font-family: Montserrat, sans-serif;
@@ -191,6 +198,7 @@
   }
 
   .h2Login {
+    font-size: 18px;
     font-family: Montserrat, sans-serif;
     color: #fff;
     margin-bottom: 20px;
@@ -198,6 +206,7 @@
   }
 
   .labelForm {
+    font-size: 15px;
     font-family: Montserrat, sans-serif;
     color: #fff;
     display: flex;
@@ -217,6 +226,7 @@
   }
 
   .buttonLogin {
+    font-size: 15px;
     border-radius: 20px;
     background-color: rgba(20, 38, 56);
     font-family: Montserrat, sans-serif;
@@ -308,6 +318,27 @@
 }
 @media screen and (min-width: 850px) {
   /* pantallas más pequeñas */
+  .formLogin {
+    width: 70vw;
+  }
+
+  .h2Login {
+    font-size: 22px;
+  }
+
+  .labelForm {
+    font-size: 17px;
+  }
+
+  .inputLogin {
+    font-size: 17px;
+
+    color: #fff;
+  }
+
+  .buttonLogin {
+    font-size: 17px;
+  }
   .logoGoHome {
     top: 42%;
     left: 50%;
