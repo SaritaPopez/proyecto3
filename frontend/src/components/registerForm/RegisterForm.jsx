@@ -37,7 +37,8 @@ function RegisterForm() {
       <div className='image-container'>
          <img className='imagenCiudad' src='https://tipsparatuviaje.com/wp-content/uploads/2019/11/rotterdam-ho.jpg' />
         <Link className='logoWeb' to="/">
-            <img className='logoGoHome' src='../src/assets/home.png' alt='icono casa' />
+            <img className='logoGoHome' src='../src/assets/C-A_white.png' alt='logo web' />
+            <h1 className='h1LoginRegister' >Ciudad Accesible</h1>
         </Link>
       </div>
 

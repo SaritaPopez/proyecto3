@@ -63,14 +63,14 @@ const SingleEntryPage = () => {
     setEntry(updatedEntry);
   };
 
-  //Función para cargar img
-  const handleImageUpload = (event) => {
-    const file = event.target.files[0];
-    if (!file) return;
+  //******** Función para cargar img ********* (REVISAR NO FUNCIONA)
+  // const handleImageUpload = (event) => {
+  //   const file = event.target.files[0];
+  //   if (!file) return;
 
-    const imageUrl = URL.createObjectURL(file);
-    setUploadedImages([...uploadedImages, imageUrl]);
-  };
+  //   const imageUrl = URL.createObjectURL(file);
+  //   setUploadedImages([...uploadedImages, imageUrl]);
+  // };
 
   // Función para cambiar al siguiente slide
   const nextSlide = () => {
@@ -155,9 +155,10 @@ const SingleEntryPage = () => {
             </p>
           </div>
           <p>Autor: {entry.username}</p>
-          //Boton guardar img
-          <button onClick={saveImages}>Guardar Imágenes</button>
-          <p>Fecha de creación: {new Date(entry.createdAt).toLocaleString()}</p>
+          
+          {/* <button onClick={saveImages}>Guardar Imágenes</button>
+          <p>Fecha de creación: {new Date(entry.createdAt).toLocaleString()}</p> */}
+          
           <FontAwesomeIcon
             icon={faHeart}
             className={`like-button ${entry.likedByMe ? 'liked' : ''}`}

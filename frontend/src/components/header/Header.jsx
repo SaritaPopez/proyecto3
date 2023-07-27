@@ -1,5 +1,4 @@
 import NavBar from '../shared/navBar/NavBar';
-import loho from '../../assets/loho.png';
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import './header.css';
@@ -9,9 +8,9 @@ function Header() {
     <>
       <header className='headerr'>
           <Link className='linkStyle' to='/'>
-          <img className='imgHeader' src='../src/assets/C-A.png' alt='logo web' />
+          <img className='imgHeader' src='../src/assets/C-A.svg' alt='logo web' />
           </Link>
-
+        <h1 className='h1Header'>Ciudad Accesible</h1>
         <nav className='navb'>
           {user && <p className='nameUser'>Hi @{user.username}!</p>}
         </nav>
