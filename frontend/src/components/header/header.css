@@ -1,5 +1,5 @@
+/* Estilos para todas las pantallas */
 @media screen and (min-width: 375px) {
-  /* pantallas más pequeñas */
   .headerr {
     width: 100vw;
     height: 20vh;
@@ -33,7 +33,10 @@
   .nameUser {
     font-family: Montserrat, sans-serif;
     font-weight: lighter;
-    font-size: 12px;
+    font-size: 10px;
+    position: absolute;
+    top: 10px; /* Ajusta la distancia desde la parte superior según tus necesidades */
+    right: 10px; /* Ajusta la distancia desde la derecha según tus necesidades */
   }
 
   nav > p {
@@ -46,12 +49,13 @@
     color: black;
   }
 }
-@media screen and (min-width: 750px) {
-  /* pantallas medianas */
-
-  .h1Header {
-    position: absolute;
+@media screen and (min-width: 480px) {
+  .nameUser {
+    font-size: 12px;
   }
 }
-
-
+@media screen and (min-width: 600px) {
+  .nameUser {
+    font-size: 15px;
+  }
+}
