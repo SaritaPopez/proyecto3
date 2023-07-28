@@ -18,6 +18,9 @@ const Admin = ({ token }) => {
   const [neightborhood, setNeightborhood] = useState('');
   const [district, setDistrict] = useState('');
   const [description, setDescription] = useState('');
+  const [photoA, setPhotoA] = useState();
+  const [photoB, setPhotoB] = useState();
+  const [photoC, setPhotoC] = useState();
   const [errMsg, setErrMsg] = useState('');
   const [loading, setLoading] = useState(false);
 
@@ -34,6 +37,9 @@ const Admin = ({ token }) => {
         neightborhood,
         district,
         description,
+        photoA,
+        photoB,
+        photoC,
         token
       );
 
@@ -113,6 +119,9 @@ const Admin = ({ token }) => {
               minLength='10'
               required
             />
+            <input type='file' onChange={(e) => setPhotoA(e.target.files[0])} />
+            <input type='file' onChange={(e) => setPhotoB(e.target.files[0])} />
+            <input type='file' onChange={(e) => setPhotoC(e.target.files[0])} />
 
             <button disabled={loading}>Publicar ↩</button>
 

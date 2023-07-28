@@ -2,7 +2,7 @@ const getDB = require('../../db/getDB');
 
 const bcrypt = require('bcrypt');
 
-const { generateError } = require('../../services/helpers');
+const { generateError } = require('../../../helpers');
 
 const insertUserQuery = async (email, username, password) => {
   let connection;

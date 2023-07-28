@@ -3,7 +3,7 @@ const selectUserByEmailQuery = require('../../models/users/selectUserByEmailQuer
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
-const { generateError } = require('../../services/helpers');
+const { generateError } = require('../../../helpers');
 
 const loginUser = async (req, res, next) => {
   try {

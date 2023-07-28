@@ -1,36 +1,32 @@
 //Variables .env
 require('dotenv').config();
 
-//Express
+//Importamos las dependencias necesarias.
 const express = require('express');
 const fileUpload = require('express-fileupload');
-
-//Creamos el servidor.
-const app = express();
-
-//Evita problemas con el cliente
-
 const cors = require('cors');
-
-app.use(cors());
+const morgan = require('morgan');
 
 // Importamos las rutas.
 const userRoutes = require('./src/routes/userRoutes');
 const entriesRoutes = require('./src/routes/entriesRoutes');
 
-//Morgan
-const morgan = require('morgan');
+//Creamos el servidor.
+const app = express();
 
-//Chalk para la terminal
-const chalk = require('chalk');
+//Evita problemas con el cliente
+app.use(cors());
+
+// Configura el middleware para servir archivos estáticos desde la carpeta 'uploads'
+app.use(express.static(process.env.UPLOADS_DIR));
 
 //Middleware que deserializa un body en formato raw creando la propiedad body en el objeto request.
 app.use(express.json());
 
-// Configura el middleware para servir archivos estáticos desde la carpeta 'uploads'
-app.use('/uploads', express.static(__dirname + '/src/services/uploads'));
-
+//Middleware que deserializa un body en formato form-data creando la propiedad body en el objeto request
+// y la propiedad files.
 app.use(fileUpload());
+
 //Middleware de petición entrante (morgan)
 app.use(morgan('dev'));
 

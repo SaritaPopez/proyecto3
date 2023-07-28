@@ -26,8 +26,7 @@ const isAdmin = require('../middlewares/isAdmin');
 
 
 //Nueva entrada
-router.post('/entries', authUserOptional, userExists, isAdmin, newEntry);
-
+router.post('/entries', authUser, userExists, isAdmin, newEntry);
 
 //Obtenemos entrada por ID
 router.get('/entries/:entryId', authUserOptional, getEntry);
@@ -42,7 +41,6 @@ router.post('/entries/:entryId/likes', authUser, userExists, newLike);
 router.delete('/entries/:entryId/likes', authUser, userExists, deleteLike);
 
 //Agregar una foto a una entrada
-
 router.post(
   '/entries/:entryId/photos',
   authUser,

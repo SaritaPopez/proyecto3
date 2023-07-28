@@ -11,7 +11,7 @@ const EntryBody = ({ description, photos }) => {
       <div className='phot'>
         {photos.length > 0 && (
           <img
-            src={`http://localhost:8080/uploads/${photos[0]?.name}`}
+            src={`http://localhost:8080/${photos[0]?.name}`}
             alt='Imagen'
           />
         )}

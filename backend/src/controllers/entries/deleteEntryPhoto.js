@@ -1,7 +1,7 @@
 const deletePhotoQuery = require('../../models/entries/deletePhotoQuery');
 const selectEntryByIdQuery = require('../../models/entries/selectEntryByIdQuery');
 //const checkPhotoExists = require('../../models/entries/checkPhotoExists');
-const { generateError, deletePhoto } = require('../../services/helpers');
+const { generateError, deletePhoto } = require('../../../helpers');
 
 const deleteEntryPhoto = async (req, res, next) => {
   try {

@@ -1,16 +1,16 @@
-import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import useAuth from '../../hooks/useAuth';
-import getEntryService from '../../services/getEntryService';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart } from '@fortawesome/free-solid-svg-icons';
-import Footer from '../../components/footer/Footer';
-import Header from '../header/Header';
-import flecha from '../../assets/flecha.png';
-import flechaIzquierda from '../../assets/flechaIzquierda.png';
-import likeEntryService from '../../services/likeEntryService';
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
+import getEntryService from "../../services/getEntryService";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import Footer from "../../components/footer/Footer";
+import Header from "../header/Header";
+import flecha from "../../assets/flecha.png";
+import flechaIzquierda from "../../assets/flechaIzquierda.png";
+import likeEntryService from "../../services/likeEntryService";
 
-import './singleentrypage.css';
+import "./singleentrypage.css";
 
 const SingleEntryPage = () => {
   const { entryId } = useParams();
@@ -27,7 +27,7 @@ const SingleEntryPage = () => {
         const response = await getEntryService(entryId, token);
         setEntry(response.data.entry);
       } catch (error) {
-        console.error('Error al obtener la entrada:', error);
+        console.error("Error al obtener la entrada:", error);
       }
     };
 
@@ -42,13 +42,13 @@ const SingleEntryPage = () => {
   // Función para manejar el evento de clic en el botón de "like"
   const handleLike = async () => {
     // Seleccionamos el método.
-    const method = Boolean(entry.likedByMe) ? 'delete' : 'post';
+    const method = Boolean(entry.likedByMe) ? "delete" : "post";
 
     // Agregamos o eliminamos el like en la base de datos.
     await likeEntryService(entry.id, method, token);
 
     // Nuevo total de likes.
-    const likes = method === 'post' ? entry.likes + 1 : entry.likes - 1;
+    const likes = method === "post" ? entry.likes + 1 : entry.likes - 1;
 
     // Creo un objeto con los datos actualizados de la entrada.
     const updatedEntry = {
@@ -88,21 +88,21 @@ const SingleEntryPage = () => {
 
   // Función para marcar el problema como resuelto usando fetch
   const markResolved = async () => {
-    if (confirm('¿Deseas marcar el servicio como resuelto?')) {
+    if (confirm("¿Deseas marcar el servicio como resuelto?")) {
       try {
         const response = await fetch(
           `http://localhost:8080/entries/${entryId}/resolved`,
           {
-            method: 'PUT',
+            method: "PUT",
             headers: {
-              'Content-Type': 'application/json',
+              "Content-Type": "application/json",
               Authorization: token,
             },
           }
         );
         const responseData = await response.json();
         if (!response.ok) {
-          throw new Error('Error al marcar como resuelto');
+          throw new Error("Error al marcar como resuelto");
         }
         if (responseData.data.resolved) {
           setResolved(true);
@@ -114,7 +114,7 @@ const SingleEntryPage = () => {
           resolved: true,
         }));
       } catch (error) {
-        console.error('Error al marcar como resuelto:', error);
+        console.error("Error al marcar como resuelto:", error);
       }
     }
   };
@@ -122,34 +122,32 @@ const SingleEntryPage = () => {
   return (
     <>
       <Header />
-      <div className='single'>
-        <div className='headertitle'>
+      <div className="single">
+        <div className="headertitle">
           <h2>{entry.title}</h2>
         </div>
-        <div className='carousel-container'>
-          <button className='carousel-button-iz' onClick={prevSlide}>
-            <img src={flechaIzquierda} alt='flecha icono' />
-          </button>
+        {entry.photos.length > 0 ? (
+          <div className="carousel-container">
+            <button className="carousel-button-iz" onClick={prevSlide}>
+              <img src={flechaIzquierda} alt="flecha icono" />
+            </button>
 
-          {entry.photos && entry.photos.length > 0 ? (
             <img
-              src={`http://localhost:8080/uploads/${entry.photos[currentIndex].name}`}
+              src={`http://localhost:8080/${entry.photos[currentIndex].name}`}
               alt={`Imagen ${entry.photos[currentIndex].id}`}
             />
-          ) : (
-            <p>No hay fotos disponibles</p>
-          )}
 
-          <button className='carousel-button-de' onClick={nextSlide}>
-            <img src={flecha} alt='flecha icono' />
-          </button>
-        </div>
+            <button className="carousel-button-de" onClick={nextSlide}>
+              <img src={flecha} alt="flecha icono" />
+            </button>
+          </div>
+        ) : <p>No hay fotos disponibles</p>}
 
-        <div className='blue'>div</div>
-        <div className='parrafo'>
+        <div className="blue">div</div>
+        <div className="parrafo">
           <h4>OVERVIEW</h4>
           <p>{entry.description}</p>
-          <div className='district'>
+          <div className="district">
             <p>
               {entry.city}, Distrito: {entry.district}
             </p>
@@ -161,20 +159,20 @@ const SingleEntryPage = () => {
 
           <FontAwesomeIcon
             icon={faHeart}
-            className={`like-button ${entry.likedByMe ? 'liked' : ''}`}
+            className={`like-button ${entry.likedByMe ? "liked" : ""}`}
             onClick={handleLike}
           />
           <p>{entry.likes}</p>
           {!resolved && (
             <>
               <input
-                type='checkbox'
-                id='resolveService'
+                type="checkbox"
+                id="resolveService"
                 onChange={markResolved}
                 checked={entry.resolved}
                 readOnly={entry.resolved}
               />
-              <label htmlFor='resolveService'>Resolver</label>
+              <label htmlFor="resolveService">Resolver</label>
             </>
           )}
         </div>

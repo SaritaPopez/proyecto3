@@ -1,6 +1,6 @@
 const selectUserByIdQuery = require('../../models/users/selectUserByIdQuery');
 
-const { generateError } = require('../../services/helpers');
+const { generateError } = require('../../../helpers');
 
 const getUser = async (req, res, next) => {
   try {
