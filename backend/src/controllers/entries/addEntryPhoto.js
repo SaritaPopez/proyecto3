@@ -1,7 +1,7 @@
 const insertPhotoQuery = require('../../models/entries/insertPhotoQuery');
 const selectEntryByIdQuery = require('../../models/entries/selectEntryByIdQuery');
 
-const { generateError, savePhoto } = require('../../services/helpers');
+const { generateError, savePhoto } = require('../../../helpers');
 
 const addEntryPhoto = async (req, res, next) => {
   try {

@@ -3,7 +3,7 @@ const markAccesibilityResolvedQuery = require('../../models/entries/markAccesibi
 //Importamos para obtener entrada concreta por su id
 const selectEntryByIdQuery = require('../../models/entries/selectEntryByIdQuery');
 
-const { generateError } = require('../../services/helpers');
+const { generateError } = require('../../../helpers');
 
 const markResolved = async (req, res, next) => {
   try {

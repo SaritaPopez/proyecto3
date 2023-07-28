@@ -11,8 +11,7 @@ const authUserOptional = require('../middlewares/authUserOptional');
 const { newUser, loginUser, getUser } = require('../controllers/users/index');
 
 //Registro de usuario
-
-router.post('/users', newUser);
+router.post('/users/register', newUser);
 
 // Login de usuario.
 router.post('/users/login', loginUser);

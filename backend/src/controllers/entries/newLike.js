@@ -1,7 +1,7 @@
 const selectEntryByIdQuery = require('../../models/entries/selectEntryByIdQuery');
 const insertLikeQuery = require('../../models/entries/insertLikeQuery');
 
-const { generateError } = require('../../services/helpers');
+const { generateError } = require('../../../helpers');
 
 const newLike = async (req, res, next) => {
     try {

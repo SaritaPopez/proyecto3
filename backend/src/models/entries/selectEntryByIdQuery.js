@@ -1,6 +1,6 @@
 const getDB = require('../../db/getDB');
 
-const { generateError } = require('../../services/helpers');
+const { generateError } = require('../../../helpers');
 
 const selectEntryByIdQuery = async (entryId, userId = 0) => {
   let connection;

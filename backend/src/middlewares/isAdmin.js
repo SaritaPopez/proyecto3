@@ -1,6 +1,6 @@
 const getDB = require('../db/getDB');
 
-const { generateError } = require('../services/helpers');
+const { generateError } = require('../../helpers');
 
 const isAdmin = async (req, res, next) => {
   let connection;

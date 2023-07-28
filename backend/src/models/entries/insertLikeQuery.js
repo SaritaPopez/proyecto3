@@ -1,6 +1,6 @@
 const getDB = require('../../db/getDB');
 
-const { generateError } = require('../../services/helpers');
+const { generateError } = require('../../../helpers');
 
 const insertLikeQuery = async (entryId, userId) => {
   let connection;

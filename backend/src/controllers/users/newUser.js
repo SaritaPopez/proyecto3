@@ -2,7 +2,7 @@ const insertUserQuery = require('../../models/users/insertUserQuery');
 
 const newUserSchema = require('../../schemas/newUserSchema');
 
-const { generateError, validateSchema } = require('../../services/helpers');
+const { generateError, validateSchema } = require('../../../helpers');
 
 const newUser = async (req, res, next) => {
   try {
