@@ -12,7 +12,9 @@
     padding-left: 1%;
   }
   .contacts {
-    background-color: blue;
+    color: rgba(96, 188, 177, 1);
+    text-align: center;
+    justify-content: center;
   }
 }
 

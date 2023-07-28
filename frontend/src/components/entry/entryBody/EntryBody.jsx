@@ -1,4 +1,7 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import { FaBars } from 'react-icons/fa';
+
 import './entrybody.css';
 const EntryBody = ({ description, photos }) => {
   console.log('Nombre de la imagen:', photos[0]?.name);
@@ -13,7 +16,9 @@ const EntryBody = ({ description, photos }) => {
           />
         )}
       </div>
-      <button className='contacts'>hola</button>
+      <Link to='/contact' className='contacts'>
+        <FaBars />
+      </Link>
     </div>
   );
 };
