@@ -37,7 +37,7 @@ function Markresolved({ entryId, token, setEntry }) {
   };
 
   return (
-    <div>
+    <div class='wrap'>
       {isLoading ? (
         <p>Marcar como resuelto...</p>
       ) : (
