@@ -13,6 +13,7 @@ const EntryBody = ({ description, photos }) => {
           />
         )}
       </div>
+      <button className='contacts'>hola</button>
     </div>
   );
 };
