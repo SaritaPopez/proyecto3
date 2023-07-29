@@ -157,11 +157,14 @@ const SingleEntryPage = () => {
           {/* <button onClick={saveImages}>Guardar Imágenes</button>
           <p>Fecha de creación: {new Date(entry.createdAt).toLocaleString()}</p> */}
 
-          <FontAwesomeIcon
-            icon={faHeart}
-            className={`like-button ${entry.likedByMe ? "liked" : ""}`}
+          
+          <button
+            className={`like-button ${entry.likedByMe ? 'liked' : ''}`}
             onClick={handleLike}
-          />
+          >
+            <span>🎉</span>
+            <span>Like</span>
+          </button>
           <p>{entry.likes}</p>
           {!resolved && (
             <>
