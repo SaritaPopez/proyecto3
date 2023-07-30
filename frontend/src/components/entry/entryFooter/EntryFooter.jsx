@@ -37,7 +37,7 @@ const EntryFooter = ({
     }
   };
   return (
-    <footer>
+    <footer className='footerr'>
       <div>
         <div
           className={`heart ${likedByMe && 'like'}`}
