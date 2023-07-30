@@ -117,6 +117,23 @@
   cursor: pointer;
   border-top: 1px solid rgb(197, 195, 195);
 }
+/* css de los tres imputs de files, falta el media query por modificar*/
+.container {
+  margin-top: 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-img {
+  display: flex;
+  margin: 5px;
+  align-items: center;
+}
+.subida-img {
+  margin-right: 10px;
+}
 
 @media screen and (min-width: 375px) {
   .form-container input {
