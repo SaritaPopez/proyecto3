@@ -119,9 +119,27 @@ const Admin = ({ token }) => {
               minLength='10'
               required
             />
-            <input type='file' onChange={(e) => setPhotoA(e.target.files[0])} />
-            <input type='file' onChange={(e) => setPhotoB(e.target.files[0])} />
-            <input type='file' onChange={(e) => setPhotoC(e.target.files[0])} />
+            
+            <label className='container-img'>
+              <input
+                alt='icono imagen'
+                type='file'
+                className='subida-img'
+                onChange={(e) => setPhotoA(e.target.files[0])}
+              />
+
+              <input
+                type='file'
+                className='subida-img'
+                onChange={(e) => setPhotoB(e.target.files[0])}
+              />
+
+               <input
+                type='file'
+                className='subida-img'
+                onChange={(e) => setPhotoC(e.target.files[0])}
+              />
+            </label>
 
             <button disabled={loading}>Publicar ↩</button>
 
