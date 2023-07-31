@@ -1,4 +1,11 @@
 @media screen and (min-width: 375px) {
+  .imgHeader {
+    width: 150px;
+    height: auto;
+
+    position: absolute;
+    top: 10vh;
+  }
   .fondop {
     background-color: #000000ce;
   }
