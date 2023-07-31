@@ -5,8 +5,8 @@ import './contactpage.css';
 function ContactPage() {
   return (
     <div className='fondop'>
-      <section className='container'>
-        <h2 className='title'>
+      <section className='containerContact'>
+        <h2 className='titleContact'>
           <span className='primary'>Meet our team</span>
         </h2>
         <div className='gallery-wrapper'>
