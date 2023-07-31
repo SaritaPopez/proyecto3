@@ -63,15 +63,6 @@ const SingleEntryPage = () => {
     setEntry(updatedEntry);
   };
 
-  //******** Función para cargar img ********* (REVISAR NO FUNCIONA)
-  // const handleImageUpload = (event) => {
-  //   const file = event.target.files[0];
-  //   if (!file) return;
-
-  //   const imageUrl = URL.createObjectURL(file);
-  //   setUploadedImages([...uploadedImages, imageUrl]);
-  // };
-
   // Función para cambiar al siguiente slide
   const nextSlide = () => {
     setCurrentIndex(
@@ -153,10 +144,6 @@ const SingleEntryPage = () => {
             </p>
           </div>
           <p>Autor: {entry.username}</p>
-
-          {/* <button onClick={saveImages}>Guardar Imágenes</button>
-          <p>Fecha de creación: {new Date(entry.createdAt).toLocaleString()}</p> */}
-
           
           <button
             className={`like-button ${entry.likedByMe ? 'liked' : ''}`}

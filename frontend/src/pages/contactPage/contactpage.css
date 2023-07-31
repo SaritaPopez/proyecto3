@@ -2,25 +2,25 @@
   .fondop {
     background-color: #000000ce;
   }
-  .container {
+  .containerContact {
     overflow-x: hidden; /* Evita el scroll horizontal */
 
     max-width: 960px;
     margin-inline: auto;
     padding: 100px 15px;
   }
-  .title {
+  .titleContact {
     margin-bottom: 50px;
   }
-  .title span {
+  .titleContact span {
     display: block;
   }
-  .title .primary {
+  .titleContact .primary {
     font-size: 13px;
     text-transform: uppercase;
     color: #fff;
   }
-  .title .secondary {
+  .titleContact .secondary {
     font-size: clamp(14px, 2.5vw, 16px);
     font-weight: 400;
     color: #d6d6e0;
@@ -126,7 +126,7 @@
     .gallery-item:hover {
       flex-basis: 100%;
     }
-    .title .primary {
+    .titleContact .primary {
       display: inline-block;
       text-align: center;
       font-size: 16px;
@@ -175,7 +175,7 @@
     }
   }
   @media screen and (min-width: 1024px) {
-    .title .primary {
+    .titleContact .primary {
       display: inline-block;
       text-align: center;
       font-size: 18px;

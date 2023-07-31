@@ -6,7 +6,7 @@ function Footer() {
   const {token, logout} = useAuth();
 
   return (
-    <footer className='footerr'>
+    <footer className='footerGeneral'>
       {token ? (
       <>
       <div className='container-entries'>

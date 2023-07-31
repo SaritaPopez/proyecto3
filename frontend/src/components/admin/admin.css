@@ -24,7 +24,6 @@
   align-items: center;
   background-color: white;
   min-height: 6px;
-  height: 30vh;
   border-radius: 20px;
   width: 90vw;
   border: none;
@@ -117,20 +116,22 @@
   cursor: pointer;
   border-top: 1px solid rgb(197, 195, 195);
 }
-/* css de los tres imputs de files, falta el media query por modificar*/
-.container {
-  margin-top: 100px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .container-img {
   display: flex;
-  margin: 5px;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
+  padding-top: 0.5rem;
 }
+
+.container-img > * {
+  max-width: calc(33.33% - 10px);
+  margin-bottom: 10px;
+}
+
+/* css de los tres imputs de files, falta el media query por modificar*/
+
 .subida-img {
   margin-right: 10px;
 }

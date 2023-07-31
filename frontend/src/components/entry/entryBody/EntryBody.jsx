@@ -10,7 +10,7 @@ const EntryBody = ({ description, photos }) => {
       <p className='description'>{description}</p>
       <div className='phot'>
         {photos.length > 0 && (
-          <img
+          <img className='phot'
             src={`http://localhost:8080/${photos[0]?.name}`}
             alt='Imagen'
           />
