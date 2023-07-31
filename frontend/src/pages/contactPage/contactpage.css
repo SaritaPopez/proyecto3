@@ -1,26 +1,31 @@
 @media screen and (min-width: 375px) {
+  .app {
+    position: absolute;
+  }
+
   .fondop {
+    position: absolute;
+    height: 100%;
     background-color: #000000ce;
   }
-  .containerContact {
+  .container {
     overflow-x: hidden; /* Evita el scroll horizontal */
 
     max-width: 960px;
     margin-inline: auto;
-    padding: 100px 15px;
   }
-  .titleContact {
+  .title {
     margin-bottom: 50px;
   }
-  .titleContact span {
+  .title span {
     display: block;
   }
-  .titleContact .primary {
+  .title .primary {
     font-size: 13px;
     text-transform: uppercase;
     color: #fff;
   }
-  .titleContact .secondary {
+  .title .secondary {
     font-size: clamp(14px, 2.5vw, 16px);
     font-weight: 400;
     color: #d6d6e0;
@@ -101,6 +106,15 @@
   }
 
   @media screen and (max-width: 973px) {
+    .app {
+      height: 100vh;
+      position: absolute;
+    }
+
+    .fondop {
+      position: absolute;
+      height: 100%;
+    }
     .item-image1 {
       position: absolute;
       top: 0;
@@ -121,12 +135,11 @@
     }
     .gallery-wrapper {
       flex-direction: column;
-      height: 100vh;
     }
     .gallery-item:hover {
       flex-basis: 100%;
     }
-    .titleContact .primary {
+    .title .primary {
       display: inline-block;
       text-align: center;
       font-size: 16px;
@@ -175,7 +188,17 @@
     }
   }
   @media screen and (min-width: 1024px) {
-    .titleContact .primary {
+    .app {
+      height: 100vh;
+      position: absolute;
+    }
+
+    .fondop {
+      position: absolute;
+      height: 100%;
+      width: 100vh;
+    }
+    .title .primary {
       display: inline-block;
       text-align: center;
       font-size: 18px;
