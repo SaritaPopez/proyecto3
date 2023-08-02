@@ -1,3 +1,9 @@
+/* Para un ancho de pantalla inferior a 700px no queremos que se vean estos botones. */
+.nav-bar > .container-entries,
+.nav-bar > .container-logout {
+  display: none
+}
+
 /* Estilos para todas las pantallas */
 @media screen and (min-width: 375px) {
   .headerr {
@@ -57,5 +63,13 @@
 @media screen and (min-width: 600px) {
   .nameUser {
     font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  /* Establecemos display block para visualizar los botones a partir de 700px de ancho. */
+  .nav-bar > .container-entries,
+  .nav-bar > .container-logout {
+    display: block
   }
 }

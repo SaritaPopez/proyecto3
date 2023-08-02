@@ -15,6 +15,7 @@ import "./singleentrypage.css";
 const SingleEntryPage = () => {
   const { entryId } = useParams();
   const { token } = useAuth();
+  
   const [entry, setEntry] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0); // Agregar el estado para el índice actual
   const [resolved, setResolved] = useState(false);

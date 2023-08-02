@@ -16,7 +16,7 @@ function Header() {
         </nav>
       </header>
 
-      <NavBar />
+      <NavBar user={user} logout={logout} />
     </>
   );
 }

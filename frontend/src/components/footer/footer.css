@@ -15,3 +15,9 @@
   background-color: rgb(244, 243, 243);
 }
 
+@media (min-width: 700px) {
+  .footerGeneral {
+    display: none
+  }
+}
+
