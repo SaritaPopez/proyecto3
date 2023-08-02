@@ -5,7 +5,7 @@
 }
 
 /* Estilos para todas las pantallas */
-@media screen and (min-width: 375px) {
+
   .headerr {
     width: 100vw;
     height: 20vh;
@@ -54,15 +54,10 @@
     text-decoration: none;
     color: black;
   }
-}
+
 @media screen and (min-width: 480px) {
   .nameUser {
     font-size: 12px;
-  }
-}
-@media screen and (min-width: 600px) {
-  .nameUser {
-    font-size: 15px;
   }
 }
 

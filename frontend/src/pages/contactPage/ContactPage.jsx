@@ -8,7 +8,7 @@ function ContactPage() {
   return (
     <div className='fondop'>
       <Link className='linkStyle' to='/'>
-        <img className='imgHeader' src='../src/assets/C-A.svg' alt='logo web' />
+        <img className='imgHeaderContact' src='../src/assets/C-A.svg' alt='logo web' />
       </Link>
       <section className='containerContact'>
         <h2 className='titleContact'>

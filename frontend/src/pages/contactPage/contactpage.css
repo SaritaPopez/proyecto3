@@ -1,8 +1,7 @@
-@media screen and (min-width: 375px) {
-  .imgHeader {
+
+  .imgHeaderContact {
     width: 150px;
     height: auto;
-
     position: absolute;
     top: 10vh;
   }
@@ -216,4 +215,4 @@
       transition-delay: 0s;
     }
   }
-}
+
