@@ -1,10 +1,15 @@
 import Ana from '../../assets/Ana.png';
 import Sara from '../../assets/Sara.jpeg';
 import javi from '../../assets/javi.jpeg';
+import { Link } from 'react-router-dom';
 import './contactpage.css';
+
 function ContactPage() {
   return (
     <div className='fondop'>
+      <Link className='linkStyle' to='/'>
+        <img className='imgHeader' src='../src/assets/C-A.svg' alt='logo web' />
+      </Link>
       <section className='containerContact'>
         <h2 className='titleContact'>
           <span className='primary'>Meet our team</span>
