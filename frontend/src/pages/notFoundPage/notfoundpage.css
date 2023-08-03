@@ -38,7 +38,7 @@
   }
 }
 
-@media screen and (min-width: 690px) {
+@media screen and (min-width: 768px) {
   #oopss {
     background: linear-gradient(-45deg, #f1f1f1, #639ea5);
     position: fixed;

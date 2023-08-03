@@ -1,103 +1,102 @@
-@media screen and (min-width: 375px) {
-  /* pantallas más pequeñas */
-  .entry.resolved {
-    border: 2px solid green;
-  }
+/* pantallas más pequeñas */
+.entry.resolved {
+  border: 2px solid green;
+}
 
-  .entry {
-    padding-bottom: 10px;
-    font-family: Montserrat, sans-serif;
-    width: 90vw;
-    border-radius: 12px 12px 12px 12px;
-    background: hsl(0, 0%, 100%);
-    border: none;
-    box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.175);
-    list-style: none;
-    text-align: center;
-    flex-direction: column;
-    display: flex;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-bottom: 1rem;
-  }
+.entry {
+  padding-bottom: 10px;
+  font-family: Montserrat, sans-serif;
+  width: 90vw;
+  border-radius: 12px 12px 12px 12px;
+  background: hsl(0, 0%, 100%);
+  border: none;
+  box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.175);
+  list-style: none;
+  text-align: center;
+  flex-direction: column;
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 1rem;
+}
 
-  li.entry {
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.134);
-  }
+li.entry {
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.134);
+}
 
-  li.entry:not(:first-child) {
-    margin: 1rem 0;
-  }
+li.entry:not(:first-child) {
+  margin: 1rem 0;
+}
 
-  /*li.entry > header {
+/*li.entry > header {
   display: flex;
   justify-content: space-around;
 }*/
 
-  li.tweet > div {
-    display: flex;
-    flex-direction: column;
-  }
+li.tweet > div {
+  display: flex;
+  flex-direction: column;
+}
 
-  li.tweet > div > p {
-    padding: 1rem;
-  }
+li.tweet > div > p {
+  padding: 1rem;
+}
 
-  li.tweet > div > img {
-    width: 100%;
-  }
+li.tweet > div > img {
+  width: 100%;
+}
 
-  li.tweet > footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+li.tweet > footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-  li.tweet > footer > div {
-    display: flex;
-    align-items: center;
-  }
+li.tweet > footer > div {
+  display: flex;
+  align-items: center;
+}
 
-  li.tweet > footer > div > div.heart {
-    cursor: pointer;
-    height: 70px;
-    width: 70px;
-    background-image: url('/public/heart_animation.png');
+li.tweet > footer > div > div.heart {
+  cursor: pointer;
+  height: 70px;
+  width: 70px;
+  background-image: url('/public/heart_animation.png');
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 2900%;
+}
+
+li.tweet > footer > div > div.heart:hover {
+  background-position: right;
+}
+
+li.tweet > footer > div > div.heart.like {
+  animation: heart-burst 0.8s steps(28) 1;
+  animation-fill-mode: forwards;
+}
+
+li.tweet > footer > button {
+  width: 80px;
+  margin-right: 1rem;
+  border: 1px solid gray;
+  align-self: center;
+  padding: 0.5rem 0;
+  font-weight: bold;
+  background-color: white;
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes heart-burst {
+  from {
     background-position: left;
-    background-repeat: no-repeat;
-    background-size: 2900%;
   }
-
-  li.tweet > footer > div > div.heart:hover {
+  to {
     background-position: right;
   }
-
-  li.tweet > footer > div > div.heart.like {
-    animation: heart-burst 0.8s steps(28) 1;
-    animation-fill-mode: forwards;
-  }
-
-  li.tweet > footer > button {
-    width: 80px;
-    margin-right: 1rem;
-    border: 1px solid gray;
-    align-self: center;
-    padding: 0.5rem 0;
-    font-weight: bold;
-    background-color: white;
-    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.4);
-  }
-
-  @keyframes heart-burst {
-    from {
-      background-position: left;
-    }
-    to {
-      background-position: right;
-    }
-  }
 }
-@media screen and (min-width: 600px) {
+
+@media screen and (min-width: 768px) {
   /* pantallas más pequeñas */
   .entry {
     margin-left: 3%;

@@ -1,42 +1,40 @@
-@media screen and (min-width: 375px) {
-  /* pantallas muy pequeñas */
+/* pantallas muy pequeñas */
 
-  .headerEntryWrapper{
-    width: 100%;
-    height: 100px;
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    text-decoration: none;
-  }
+.headerEntryWrapper {
+  width: 100%;
+  height: 100px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-decoration: none;
+}
 
-  .imageAdmi {
-    float: right;
-    margin-right: 2px;
-    margin-left: 10px;
-  }
+.imageAdmi {
+  float: right;
+  margin-right: 2px;
+  margin-left: 10px;
+}
 
-  .imageAdmi img {
-    border-radius: 200px;
-    width: 80px;
-  }
-  .username {
-    font-size: 12px;
+.imageAdmi img {
+  border-radius: 200px;
+  width: 80px;
+}
+.username {
+  font-size: 12px;
 
-    margin-right: 4px;
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-  }
-  time {
-    color: black;
+  margin-right: 4px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+time {
+  color: black;
 
-    font-size: 10px;
-    margin-right: 1px;
-    text-decoration: none;
-  }
+  font-size: 10px;
+  margin-right: 1px;
+  text-decoration: none;
 }
 
 @media screen and (min-width: 480px) {
@@ -66,7 +64,7 @@
     text-decoration: none;
   }
 }
-@media screen and (min-width: 780px) {
+@media screen and (min-width: 768px) {
   /* pantallas medianas */
   .imageAdmi {
     float: right;
