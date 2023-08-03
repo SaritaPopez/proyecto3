@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 import getEntryService from '../../Services/getEntryService';
@@ -17,12 +17,12 @@ const SingleEntryPage = () => {
   const { token } = useAuth();
 
   const [entry, setEntry] = useState(null);
-  const [currentIndex, setCurrentIndex] = useState(0); // Agregar el estado para el índice actual
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [resolved, setResolved] = useState(false);
-  const [uploadedImages, setUploadedImages] = useState([]); //Para saber el estado de las imagenes
+  const [uploadedImages, setUploadedImages] = useState([]);
+  const [showHearts, setShowHearts] = useState(false);
 
   useEffect(() => {
-    // Hacer la solicitud para obtener la entrada concreta
     const fetchEntry = async () => {
       try {
         const response = await getEntryService(entryId, token);
@@ -35,50 +35,44 @@ const SingleEntryPage = () => {
     fetchEntry();
   }, [entryId, token]);
 
-  // Mostrar un mensaje de carga mientras se obtiene la entrada
-  if (!entry) {
-    return <p>Cargando entrada...</p>;
-  }
-
-  // Función para manejar el evento de clic en el botón de "like"
   const handleLike = async () => {
-    // Seleccionamos el método.
-    const method = Boolean(entry.likedByMe) ? 'delete' : 'post';
+    const method = Boolean(entry?.likedByMe) ? 'delete' : 'post';
 
-    // Agregamos o eliminamos el like en la base de datos.
     await likeEntryService(entry.id, method, token);
 
-    // Nuevo total de likes.
     const likes = method === 'post' ? entry.likes + 1 : entry.likes - 1;
 
-    // Creo un objeto con los datos actualizados de la entrada.
     const updatedEntry = {
       ...entry,
-      likedByMe: !Boolean(entry.likedByMe),
+      likedByMe: !Boolean(entry?.likedByMe),
       likes,
     };
 
-    console.log(updatedEntry);
-
-    // Actualizamos los datos del servicio en el State.
     setEntry(updatedEntry);
+    setShowHearts(true);
   };
 
-  // Función para cambiar al siguiente slide
+  useEffect(() => {
+    if (showHearts) {
+      const timer = setTimeout(() => {
+        setShowHearts(false);
+      }, 2000);
+      return () => clearTimeout(timer);
+    }
+  }, [showHearts]);
+
   const nextSlide = () => {
     setCurrentIndex(
-      (prevIndex) => (prevIndex + 1) % (entry.photos?.length || 1)
+      (prevIndex) => (prevIndex + 1) % (entry?.photos?.length || 1)
     );
   };
 
-  // Función para cambiar al slide anterior
   const prevSlide = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? (entry.photos?.length || 1) - 1 : prevIndex - 1
+      prevIndex === 0 ? (entry?.photos?.length || 1) - 1 : prevIndex - 1
     );
   };
 
-  // Función para marcar el problema como resuelto usando fetch
   const markResolved = async () => {
     if (confirm('¿Deseas marcar el servicio como resuelto?')) {
       try {
@@ -100,7 +94,6 @@ const SingleEntryPage = () => {
           setResolved(true);
         }
 
-        // Actualiza el estado local del problema de accesibilidad para reflejar que está resuelto
         setEntry((prevEntry) => ({
           ...prevEntry,
           resolved: true,
@@ -115,18 +108,16 @@ const SingleEntryPage = () => {
     <>
       <Header />
       <div className='single'>
-        <div className='headertitle'>
-          <h2>{entry.title}</h2>
-        </div>
-        {entry.photos.length > 0 ? (
+        <div className='headertitle'>{entry && <h2>{entry.title}</h2>}</div>
+        {entry?.photos.length > 0 ? (
           <div className='carousel-container'>
             <button className='carousel-button-iz' onClick={prevSlide}>
               <img src={flechaIzquierda} alt='flecha icono' />
             </button>
 
             <img
-              src={`http://localhost:8080/${entry.photos[currentIndex].name}`}
-              alt={`Imagen ${entry.photos[currentIndex].id}`}
+              src={`http://localhost:8080/${entry?.photos[currentIndex]?.name}`}
+              alt={`Imagen ${entry?.photos[currentIndex]?.id}`}
             />
 
             <button className='carousel-button-de' onClick={nextSlide}>
@@ -140,30 +131,36 @@ const SingleEntryPage = () => {
         <div className='blue'>div</div>
         <div className='parrafo'>
           <h4>OVERVIEW</h4>
-          <p>{entry.description}</p>
+          <p>{entry && entry.description}</p>
           <div className='district'>
             <p>
-              {entry.city}, Distrito: {entry.district}
+              {entry?.city}, Distrito: {entry?.district}
             </p>
           </div>
-          <p>Autor: {entry.username}</p>
+          <p>Autor: {entry && entry.username}</p>
 
           <button
-            className={`like-button ${entry.likedByMe ? 'liked' : ''}`}
+            className={`like-button ${entry?.likedByMe ? 'liked' : ''}`}
             onClick={handleLike}
           >
-            <span>🎉</span>
-            <span>Like</span>
+            {showHearts ? (
+              <span className='heart-animation'>
+                <FontAwesomeIcon icon={faHeart} />
+              </span>
+            ) : (
+              <span>❤️</span>
+            )}
+            <span></span>
           </button>
-          <p>{entry.likes}</p>
+          <p>{entry?.likes}</p>
           {!resolved && (
             <>
               <input
                 type='checkbox'
                 id='resolveService'
                 onChange={markResolved}
-                checked={entry.resolved}
-                readOnly={entry.resolved}
+                checked={entry?.resolved}
+                readOnly={entry?.resolved}
               />
               <label htmlFor='resolveService'>Resolver</label>
             </>

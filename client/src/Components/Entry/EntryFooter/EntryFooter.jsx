@@ -43,7 +43,6 @@ const EntryFooter = ({
           className={`heart ${likedByMe && 'like'}`}
           onClick={(e) => handleLike(e)}
         ></div>
-        <p>{likes}</p>
       </div>
       {token && owner === 1 && (
         <button onClick={() => handleDeleteEntry()} disabled={loading}>
@@ -65,3 +64,5 @@ EntryFooter.propTypes = {
 };
 
 export default EntryFooter;
+
+// he quitado los likes de las entries en la Home <p>{likes}</p>, solo salen si pinchas la entry

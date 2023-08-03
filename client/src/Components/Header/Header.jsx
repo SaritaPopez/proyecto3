@@ -1,4 +1,6 @@
 import NavBar from '../Shared/navBar/NavBar';
+import { FaBars } from 'react-icons/fa';
+
 import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 import './header.css';
@@ -7,6 +9,12 @@ function Header() {
   return (
     <>
       <header className='headerr'>
+        <div className='header-container'>
+          <Link to='/contact' className='contacts'>
+            <FaBars />
+          </Link>
+          <h1 className='h1Header'>Ciudad Accesible</h1>
+        </div>
         <Link className='linkStyle' to='/'>
           <img
             className='imgHeader'
@@ -14,7 +22,6 @@ function Header() {
             alt='logo web'
           />
         </Link>
-        <h1 className='h1Header'>Ciudad Accesible</h1>
         <nav className='navb'>
           {user && <p className='nameUser'>Hi @{user.username}!</p>}
         </nav>

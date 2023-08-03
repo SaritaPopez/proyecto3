@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { FaBars } from 'react-icons/fa';
 
 import './entrybody.css';
 const EntryBody = ({ description, photos }) => {
@@ -10,15 +9,13 @@ const EntryBody = ({ description, photos }) => {
       <p className='description'>{description}</p>
       <div className='phot'>
         {photos.length > 0 && (
-          <img className='phot'
+          <img
+            className='phot'
             src={`http://localhost:8080/${photos[0]?.name}`}
             alt='Imagen'
           />
         )}
       </div>
-      <Link to='/contact' className='contacts'>
-        <FaBars />
-      </Link>
     </div>
   );
 };
