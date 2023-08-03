@@ -133,7 +133,7 @@ const SingleEntryPage = () => {
               <img src={flecha} alt="flecha icono" />
             </button>
           </div>
-        ) : <p>No hay fotos disponibles</p>}
+        ) : <></>}
 
         <div className="blue">div</div>
         <div className="parrafo">
