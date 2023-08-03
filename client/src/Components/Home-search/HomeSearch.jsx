@@ -24,7 +24,7 @@ const HomeSearch = ({ searchParams, setSearchParams }) => {
           onChange={(e) => setKeyword(e.target.value)}
         />
         <button className='buttonsearch'>
-          <img src='src/assets/search.png' alt='lupa con lineas' />
+          <img src='src/Assets/search.png' alt='lupa con lineas' />
         </button>
       </form>
     </>
