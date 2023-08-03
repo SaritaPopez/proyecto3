@@ -1,0 +1,104 @@
+@media screen and (min-width: 375px) {
+  /* pantallas más pequeñas */
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1 rem;
+  }
+
+  .searchbar {
+    font-family: Montserrat, sans-serif;
+    width: 244px;
+    height: 52px;
+    border-radius: 4px 0px 0px 4px;
+    background: hsl(0, 50%, 99%);
+    border: none;
+    position: relative;
+    bottom: 10px;
+    z-index: 1;
+    box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.175);
+  }
+
+  .buttonsearch {
+    width: 63px;
+    height: 52px;
+    border-radius: 0px 4px 4px 0px;
+    background: #ca720a;
+    border: none;
+    position: relative;
+    bottom: 10px;
+    z-index: 1;
+    box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.175);
+  }
+}
+@media screen and (min-width: 480px) {
+  /* pantallas  pequeñas */
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1 rem;
+  }
+
+  .searchbar {
+    font-family: Montserrat, sans-serif;
+    width: 344px;
+    height: 52px;
+    border-radius: 4px 0px 0px 4px;
+    background: hsl(0, 50%, 99%);
+    border: none;
+    position: relative;
+    bottom: 10px;
+    z-index: 1;
+    box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.175);
+  }
+
+  .buttonsearch {
+    width: 53px;
+    height: 52px;
+    border-radius: 0px 4px 4px 0px;
+    background: #ca720a;
+    border: none;
+    position: relative;
+    bottom: 10px;
+    z-index: 1;
+    padding-left: 10px;
+    box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.175);
+  }
+}
+@media screen and (min-width: 720px) {
+  /* pantallas medianas */
+
+  .searchbar {
+    font-family: Montserrat, sans-serif;
+    width: 384px;
+    height: 52px;
+    border-radius: 4px 0px 0px 4px;
+    background: hsl(0, 50%, 99%);
+    border: none;
+    position: relative;
+    bottom: 10px;
+    z-index: 1;
+    box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.175);
+  }
+
+  .buttonsearch {
+    width: 53px;
+    height: 52px;
+    border-radius: 0px 4px 4px 0px;
+    background: #ca720a;
+    border: none;
+    position: relative;
+    bottom: 10px;
+    z-index: 1;
+    box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.175);
+  }
+}
+@media screen and (min-width: 1024px) {
+  /* pantallas grandes */
+  .searchbar {
+    font-family: Montserrat, sans-serif;
+    width: 454px;
+  }
+}

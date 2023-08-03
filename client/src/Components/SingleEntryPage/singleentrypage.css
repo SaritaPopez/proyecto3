@@ -1,0 +1,387 @@
+@media screen and (min-width: 480px) {
+  /* pantallas más pequeñas */
+
+  .single {
+    width: 100vw;
+    position: relative;
+    overflow-x: hidden;
+    padding-bottom: 300px;
+  }
+
+  .single img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    max-width: 100%;
+  }
+
+  .headertitle {
+    padding-top: 20px;
+    width: 100vw;
+    height: 114px;
+    color: white;
+    font-family: Montserrat, sans-serif;
+    text-align: center;
+    position: absolute;
+    bottom: 167px;
+    z-index: 1;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.888),
+      rgba(0, 0, 0, 0.99)
+    );
+  }
+
+  .parrafo {
+    padding-left: 80px;
+    position: absolute;
+    top: 445px; /* Colocar el div "parrafo" debajo del div "headertitle" */
+    width: 100%;
+    font-family: Montserrat, sans-serif;
+  }
+  .parrafo p {
+    padding-right: 120px;
+    font-size: 13px;
+  }
+
+  .blue {
+    background-color: rgba(
+      27,
+      182,
+      164,
+      0.59
+    ); /* Color de fondo con transparencia */
+    position: absolute;
+    top: 50%; /* Ajustar la posición del div .blue debajo de .headertitle */
+    padding-bottom: 40px;
+    height: 100vh;
+    color: transparent;
+    width: 40px;
+  }
+
+  .district {
+    top: 700px; /* Colocar el div "parrafo" debajo del div "headertitle" */
+    width: 100%;
+    font-family: Montserrat, sans-serif;
+  }
+
+  /*css confetti */
+
+  .like-button {
+    width: 100px;
+    background-color: #404663;
+    color: #fff;
+    border: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 0.5em 1.25em;
+    border-radius: 0.5em;
+    z-index: 999;
+    position: relative;
+    display: flex;
+    gap: 0.5em;
+    box-shadow: 0px 1.7px 2.2px rgba(0, 0, 0, 0.02),
+      0px 4px 5.3px rgba(0, 0, 0, 0.028), 0px 7.5px 10px rgba(0, 0, 0, 0.035),
+      0px 13.4px 17.9px rgba(0, 0, 0, 0.042),
+      0px 25.1px 33.4px rgba(0, 0, 0, 0.05), 0px 60px 80px rgba(0, 0, 0, 0.07);
+  }
+
+  .like-button.liked {
+    transform: scale(1.01);
+  }
+}
+
+/* Estilos para los botones de navegación */
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+button:hover {
+  color: #ff0000; /* Cambiar el color al pasar el cursor por encima */
+}
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 300px; /* Ajusta la altura deseada para el carrusel */
+}
+
+.carousel-button-de {
+  margin-left: 87%;
+  width: 50px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  transition: color 0.3s ease;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  z-index: 2;
+}
+
+.carousel-button-de:hover {
+  color: #ff0000;
+}
+.carousel-button-iz {
+  margin-left: 5%;
+  width: 50px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  transition: color 0.3s ease;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  z-index: 2;
+}
+
+.carousel-button-iz:hover {
+  color: #ff0000;
+}
+
+/* PENDIENTE Estilo del botón "Seleccionar archivo" */
+.botonseleccionar[type='file'] {
+  background-color: #4c9baf;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 500px;
+  display: inline-block;
+}
+
+@media screen and (min-width: 700px) {
+  /* pantallas medianas*/
+  .blue {
+    background-color: rgba(
+      27,
+      182,
+      164,
+      0.59
+    ); /* Color de fondo con transparencia */
+    position: absolute;
+    top: 50%; /* Ajustar la posición del div .blue debajo de .headertitle */
+    height: 100vh;
+    color: transparent;
+    width: 60px;
+  }
+  .carousel-container #imag {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: auto; /* Ajusta la altura deseada para el carrusel */
+  }
+  .parrafo {
+    padding-left: 100px;
+  }
+  .parrafo p {
+    padding-right: 140px;
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .single img {
+    padding-left: 10%;
+    width: 80%;
+    height: auto;
+  }
+  /* pantallas grandes*/
+  .carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: auto;
+
+    /* Ajusta la altura deseada para el carrusel */
+  }
+  .parrafo {
+    padding-top: 120px;
+    padding-left: 120px;
+  }
+  .parrafo p {
+    font-size: 16px;
+  }
+  .headertitle {
+    padding-top: 20px;
+    width: 100vw;
+    height: 114px;
+    color: white;
+    font-family: Montserrat, sans-serif;
+    text-align: center;
+    position: absolute;
+    bottom: 168px;
+    z-index: 1;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.888),
+      rgba(0, 0, 0, 0.99)
+    );
+  }
+  .blue {
+    background-color: rgba(
+      27,
+      182,
+      164,
+      0.59
+    ); /* Color de fondo con transparencia */
+    position: absolute;
+    top: 58%; /* Ajustar la posición del div .blue debajo de .headertitle */
+    height: 100vh;
+    color: transparent;
+    width: 60px;
+  }
+  .carousel-button-de {
+    margin-left: 80%;
+    width: 50px;
+  }
+
+  .carousel-button-iz {
+    margin-left: 14.5%;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  /* pantallas grandes*/
+
+  .carousel-button-de {
+    margin-left: 77%;
+    width: 50px;
+  }
+
+  .carousel-button-de:hover {
+    color: #ff0000;
+  }
+  .carousel-button-iz {
+    margin-left: 18.5%;
+  }
+
+  .carousel-button-iz:hover {
+    color: #ff0000;
+  }
+  .single img {
+    padding-left: 17%;
+    width: 65%;
+    height: auto;
+  }
+  .carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: auto;
+  }
+  .parrafo {
+    padding-top: 90px;
+    padding-left: 180px;
+    font-size: 18px;
+  }
+  .parrafo p {
+    padding-right: 250px;
+  }
+  .headertitle {
+    padding-top: 10px;
+
+    width: 100vw;
+    height: 114px;
+    color: white;
+    font-size: 30px;
+    font-family: Montserrat, sans-serif;
+    text-align: center;
+    position: absolute;
+    bottom: 178px;
+    z-index: 1;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.888),
+      rgba(0, 0, 0, 0.99)
+    );
+  }
+  .blue {
+    background-color: rgba(
+      27,
+      182,
+      164,
+      0.59
+    ); /* Color de fondo con transparencia */
+    position: absolute;
+    top: 57%; /* Ajustar la posición del div .blue debajo de .headertitle */
+    height: 100vh;
+    color: transparent;
+    width: 100px;
+  }
+}
+
+/*Pequeña animación checkbox resolved*/
+
+input[type='checkbox'] {
+  min-width: 25px;
+  min-height: 25px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #313133;
+  background: #4fd1c5;
+  background: linear-gradient(
+    90deg,
+    rgba(129, 230, 217, 1) 0%,
+    rgba(79, 209, 197, 1) 100%
+  );
+  border: none;
+  border-radius: 1000px;
+  /* box-shadow: 12px 12px 24px rgba(79, 209, 197, 0.64);*/
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+}
+
+input[type='checkbox']:hover,
+input[type='checkbox']:focus {
+  color: #313133;
+  /*transform: translateY(-6px);*/
+}
+
+input[type='checkbox']:hover::before,
+input[type='checkbox']:focus::before {
+  opacity: 1;
+}
+
+input:checked[type='checkbox'] {
+  content: '';
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: 6px solid #00ffcb;
+  position: absolute;
+  z-index: -1;
+  top: 345px;
+  left: 160px;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+input:checked[type='checkbox']:hover::after,
+input:checked[type='checkbox']:focus::after {
+  animation: none;
+  display: none;
+}

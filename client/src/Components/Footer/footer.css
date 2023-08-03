@@ -1,0 +1,23 @@
+.footerGeneral {
+  background-color: rgb(244, 243, 243);
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  min-height: 3rem;
+}
+
+.button-logout {
+  border: transparent;
+  color: rgb(75, 75, 75);
+  background-color: rgb(244, 243, 243);
+}
+
+@media (min-width: 700px) {
+  .footerGeneral {
+    display: none
+  }
+}
+
