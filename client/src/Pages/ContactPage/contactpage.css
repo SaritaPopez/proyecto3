@@ -1,19 +1,28 @@
 .logoContact {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 999;
-  width: 100%;
-  max-width: 150px; /* Ajusta el valor según el tamaño deseado del logo */
-
+  z-index: 1;
+  width: 100vw;
+  max-width: 20vw; /* Ajusta el valor según el tamaño deseado del logo */
   padding: 10px;
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
+.h1Contact{
+  position: absolute;
+  display: inline;
+  top: 60%;
+  color: #fff;
+  font-size: 100%;
+  z-index: 1;
+}
+
 .logoContact img {
-  width: 100%;
+  width: 20vh;
   height: auto;
 }
 
@@ -197,6 +206,16 @@
   }
 }
 @media screen and (min-width: 1024px) {
+
+  .h1Contact{
+    position: absolute;
+    top: 60%;
+    display: flex;
+    color: #fff;
+    font-size: 150%;
+    z-index: 1;
+  }
+
   .titleContact .primary {
     display: inline-block;
     text-align: center;
