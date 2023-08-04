@@ -1,5 +1,5 @@
 import NavBar from '../Shared/navBar/NavBar';
-import { FaBars } from 'react-icons/fa';
+import { BsTelephoneInbound } from 'react-icons/bs';
 
 import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
@@ -11,7 +11,7 @@ function Header() {
       <header className='headerr'>
         <div className='header-container'>
           <Link className='contacts' to='/contact'>
-            <FaBars />
+            <BsTelephoneInbound />
           </Link>
           <h1 className='h1Header'>Ciudad Accesible</h1>
         </div>

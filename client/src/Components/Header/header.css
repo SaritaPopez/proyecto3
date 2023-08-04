@@ -54,9 +54,10 @@ nav > p {
 }
 
 .contacts {
+  color: rgb(249, 162, 0);
   position: absolute;
-  top: 10px; /* Ajusta la distancia desde la parte superior según tus necesidades */
-  left:40px; /* Ajusta la distancia desde la derecha según tus necesidades */
+  top: 22px; /* Ajusta la distancia desde la parte superior según tus necesidades */
+  left: 20px; /* Ajusta la distancia desde la derecha según tus necesidades */
 }
 
 @media screen and (min-width: 480px) {
@@ -66,7 +67,12 @@ nav > p {
 }
 
 @media screen and (min-width: 768px) {
-  /* Establecemos display block para visualizar los botones a partir de 700px de ancho. */
+  .contacts {
+    font-size: 20px;
+    position: absolute;
+    top: 20px;
+    left: 40px;
+  }
   .nav-bar > .container-entries,
   .nav-bar > .container-logout {
     display: block;
@@ -81,7 +87,7 @@ nav > p {
     position: relative;
     text-decoration: none;
   }
-  
+
   .imgHeader {
     position: absolute;
     top: 46%;
@@ -91,7 +97,7 @@ nav > p {
     width: 50vw;
     height: 12vh;
   }
-  
+
   .h1Header {
     font-size: 150%;
     position: absolute;
@@ -100,19 +106,21 @@ nav > p {
     transform: translate(-50%, -50%);
     z-index: 1;
   }
-  
+
   .nameUser {
     font-family: Montserrat, sans-serif;
     font-weight: lighter;
     font-size: 12px;
     position: absolute;
     top: 10px; /* Ajusta la distancia desde la parte superior según tus necesidades */
-    right:40px; /* Ajusta la distancia desde la derecha según tus necesidades */
+    right: 40px; /* Ajusta la distancia desde la derecha según tus necesidades */
   }
 }
 
 @media screen and (min-width: 1024px) {
-  /* Establecemos display block para visualizar los botones a partir de 700px de ancho. */
+  .contacts {
+    font-size: 30px;
+  }
   .nav-bar > .container-entries,
   .nav-bar > .container-logout {
     display: block;
@@ -127,7 +135,7 @@ nav > p {
     position: relative;
     text-decoration: none;
   }
-  
+
   .imgHeader {
     position: absolute;
     top: 48%;
@@ -137,7 +145,7 @@ nav > p {
     width: 50vw;
     height: 15vh;
   }
-  
+
   .h1Header {
     font-size: 200%;
     position: absolute;
@@ -146,7 +154,7 @@ nav > p {
     transform: translate(-50%, -50%);
     z-index: 1;
   }
-  
+
   .nameUser {
     font-family: Montserrat, sans-serif;
     font-weight: lighter;
