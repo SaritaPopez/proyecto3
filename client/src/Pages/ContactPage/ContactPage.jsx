@@ -7,15 +7,16 @@ import './contactpage.css';
 function ContactPage() {
   return (
     <>
-      <Link className='linkStyle' to='/'>
-        <div className='logoContact'>
+      <div className='logoContact'>
+        <h1 className='h1Contact'>Ciudad Accesible</h1>
+        <Link className='linkStyle' to='/'>
           <img
             className='imgHeaderContact'
             src='../src/Assets/C-A.svg'
             alt='logo web'
           />
-        </div>
-      </Link>
+        </Link>
+      </div>
       <div className='fondop'>
         <section className='containerContact'>
           <h2 className='titleContact'>

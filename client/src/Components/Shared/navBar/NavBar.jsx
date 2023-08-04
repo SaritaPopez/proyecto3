@@ -8,24 +8,24 @@ function NavBar({ user, logout }) {
       { !user && <>
         <div className='container-signup'>
         <NavLink className='linkStyle' to='/register'>
-          <p> Sign up</p>
+          <p>📋 Sign up</p>
         </NavLink>
       </div>
       <div className='container-login'>
         <NavLink className='linkStyle' to='/login'>
-          <p>login</p>
+          <p>🔓 Login</p>
         </NavLink>
       </div>
       </>}
       { user && <>
       <div className='container-entries'>
         <NavLink className='linkStyle' to='/message'>
-          <p>✍🏻  Crear entrada ➕</p>
+          <p>✍🏻  Create Entry ➕</p>
         </NavLink>
       </div>
       <div className='container-logout'>
         <NavLink className='button-logout' onClick={logout}>
-          <p>👋🏻  Cerrar sesión 🔚</p>
+          <p>👋🏻  Logout 🔚</p>
         </NavLink>
       </div>
       </>}
