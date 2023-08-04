@@ -17,6 +17,7 @@
   max-width: 100vw;
 }
 
+
 .headertitle {
   width: 100vw;
   height: 13%;
@@ -229,7 +230,11 @@
     .headertitle {
       font-size: 22px;
     }
-
+  
+    .imagenCarruselEntry {
+      margin-left: 10vw;
+      margin-right: 10vw;
+    }
     .parrafo {
       padding-left: 20%;
       position: absolute;
@@ -264,12 +269,18 @@
       position: relative;
       height: auto; /* Ajusta la altura deseada para el carrusel */
     }
+    
     .parrafo {
       font-size: 30px;
       padding-left: 1%;
     }
     .parrafo p {
       font-size: 25px;
+    }
+
+    .imagenCarruselEntry {
+      margin-left: 10vw;
+      margin-right: 10vw;
     }
   }
 }
