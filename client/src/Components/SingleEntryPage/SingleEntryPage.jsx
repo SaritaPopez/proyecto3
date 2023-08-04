@@ -115,7 +115,7 @@ const SingleEntryPage = () => {
               <img src={flechaIzquierda} alt='flecha icono' />
             </button>
 
-            <img
+            <img className='imagenCarruselEntry'
               src={`http://localhost:8080/${entry?.photos[currentIndex]?.name}`}
               alt={`Imagen ${entry?.photos[currentIndex]?.id}`}
             />
@@ -125,7 +125,10 @@ const SingleEntryPage = () => {
             </button>
           </div>
         ) : (
-          <p>No hay fotos disponibles</p>
+          <img
+          className='imagenCiudad'
+          src='https://images.pexels.com/photos/380283/pexels-photo-380283.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+        />
         )}
 
         <div className='blue'>div</div>
@@ -133,12 +136,13 @@ const SingleEntryPage = () => {
           <h4>OVERVIEW</h4>
           <p>{entry && entry.description}</p>
           <div className='district'>
-            <p>
-              {entry?.city}, Distrito: {entry?.district}
-            </p>
+            <p> Ciudad: {entry?.city} </p>
+            <p> Barrio: {entry?.neightborhood}</p>
+            <p> Distrito: {entry?.district}</p>
           </div>
           <p>Autor: {entry && entry.username}</p>
 
+          <div className='apartadoLike'>
           <button
             className={`like-button ${entry?.likedByMe ? 'liked' : ''}`}
             onClick={handleLike}
@@ -153,6 +157,8 @@ const SingleEntryPage = () => {
             <span></span>
           </button>
           <p>{entry?.likes}</p>
+          </div>
+
           {!resolved && (
             <>
               <input
@@ -162,7 +168,7 @@ const SingleEntryPage = () => {
                 checked={entry?.resolved}
                 readOnly={entry?.resolved}
               />
-              <label htmlFor='resolveService'>Resolver</label>
+              <label htmlFor='resolveService'>Resuelto</label>
             </>
           )}
         </div>

@@ -2,7 +2,6 @@ import Header from '../../Components/Header/Header';
 import Footer from '../../Components/Footer/Footer';
 import EntriesSearch from '../../Components/EntriesSearch/EntriesSearch';
 
-//import Comments from '../../components/comments/Comments';
 import './home.css';
 
 function Home() {
