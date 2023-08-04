@@ -1,8 +1,10 @@
 /* Estilo general */
 
 .single {
-  width: 100%; /* Cambia el ancho a 100% */
-  max-width: 100vw; /* Para asegurarse de que no supere el ancho de la pantalla */
+  overflow-x: hidden;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
   height: auto;
   position: relative;
   padding-bottom: 300px;
@@ -13,19 +15,18 @@
   height: auto;
   max-height: 400px;
   max-width: 100vw;
-  
 }
 
 .headertitle {
   width: 100vw;
-  height: 11vh;
+  height: 13%;
   color: white;
   font-size: 13px;
   font-family: Montserrat, sans-serif;
   text-align: center;
   position: absolute;
   z-index: 1;
-  bottom: 52vh;
+  bottom: 42%;
   background-image: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.888),
@@ -34,30 +35,30 @@
 }
 
 .parrafo {
-  padding-left: 20vw;
+  left: 22%;
   position: absolute;
-  top: 65vh; /* Colocar el div "parrafo" debajo del div "headertitle" */
-  width: 100vw;
+  top: 64%;
+  width: 75vw;
   font-family: Montserrat, sans-serif;
+
+  right: 28%;
 }
 .parrafo p {
-  padding-right: 120px;
+  margin-right: 120px;
   font-size: 13px;
+}
+.desc p {
+  padding-right: 28%;
+  font-size: 11px;
 }
 
 .blue {
-  background-color: rgba(
-    27,
-    182,
-    164,
-    0.59
-  ); /* Color de fondo con transparencia */
+  background-color: rgba(27, 182, 164, 0.59);
   position: absolute;
-  top: 50%; /* Ajustar la posición del div .blue debajo de .headertitle */
-  padding-bottom: 40px;
-  height: 65vh;
-  width: 40px;
+  top: 58%;
+  height: 100vh;
   color: transparent;
+  width: 60px;
 }
 
 .district {
@@ -175,132 +176,100 @@
   }
 }
 @media screen and (min-width: 480px) {
-button:hover {
-  color: #ff0000; /* Cambiar el color al pasar el cursor por encima */
-}
-.carousel-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 100%;
-  overflow: hidden;
-  position: relative;
-  height: 300px; /* Ajusta la altura deseada para el carrusel */
-}
-
-.carousel-button-de {
-  margin-left: 87%;
-  width: 50px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-
-  transition: color 0.3s ease;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 10px;
-  z-index: 2;
-}
-
-.carousel-button-de:hover {
-  color: #ff0000;
-}
-.carousel-button-iz {
-  margin-left: 5%;
-  width: 50px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  transition: color 0.3s ease;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 10px;
-  z-index: 2;
-}
-
-.carousel-button-iz:hover {
-  color: #ff0000;
-}
-
-
-@media screen and (min-width: 768px) {
-
-  .headertitle {
-    width: 100vw;
-    height: 10vh;
-    color: white;
-    font-size: 22px;
-    font-family: Montserrat, sans-serif;
-    text-align: center;
-    position: absolute;
-    z-index: 1;
-    bottom: 20vh;
-    background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.888),
-      rgba(0, 0, 0, 0.99)
-    );
+  button:hover {
+    color: #ff0000; /* Cambiar el color al pasar el cursor por encima */
   }
-  
-  .parrafo {
-    padding-left: 15vw;
-    position: absolute;
-    top: 40vh; /* Colocar el div "parrafo" debajo del div "headertitle" */
-    width: 80vw;
-    font-family: Montserrat, sans-serif;
-  }
-  .parrafo p {
-    padding-right: 120px;
-    font-size: 13px;
-  }
-  .blue {
-    background-color: rgba(
-      27,
-      182,
-      164,
-      0.59
-    ); /* Color de fondo con transparencia */
-    position: absolute;
-    top: 50%; /* Ajustar la posición del div .blue debajo de .headertitle */
-    padding-bottom: 40px;
-    height: 57vh;
-    width: 60px;
-    color: transparent;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  /* pantallas medianas*/
-  .blue {
-    background-color: rgba(
-      27,
-      182,
-      164,
-      0.59
-    ); /* Color de fondo con transparencia */
-    position: absolute;
-    top: 50%; /* Ajustar la posición del div .blue debajo de .headertitle */
-    height: 60vh;
-    color: transparent;
-    width: 90px;
-  }
-
-  .carousel-container #imag {
+  .carousel-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     max-width: 100%;
     overflow: hidden;
     position: relative;
-    height: auto; /* Ajusta la altura deseada para el carrusel */
-  }
-  .parrafo {
-    font-size: 30px;
-  }
-  .parrafo p {
-    font-size: 25px;
+    height: 300px; /* Ajusta la altura deseada para el carrusel */
   }
 
-}}
+  .carousel-button-de {
+    margin-left: 87%;
+    width: 50px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    transition: color 0.3s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    z-index: 2;
+  }
+
+  .carousel-button-de:hover {
+    color: #ff0000;
+  }
+  .carousel-button-iz {
+    margin-left: 5%;
+    width: 50px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    z-index: 2;
+  }
+
+  .carousel-button-iz:hover {
+    color: #ff0000;
+  }
+
+  @media screen and (min-width: 768px) {
+    .headertitle {
+      font-size: 22px;
+    }
+
+    .parrafo {
+      padding-left: 20%;
+      position: absolute;
+      top: 68%; /* Colocar el div "parrafo" debajo del div "headertitle" */
+      width: 80vw;
+      font-family: Montserrat, sans-serif;
+    }
+    .parrafo p {
+      padding-right: 120px;
+      font-size: 15px;
+    }
+    .parrafo h4 {
+      font-size: 22px;
+    }
+    .parrafo {
+      padding-left: 4%;
+    }
+    .blue {
+      width: 12%;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    /* pantallas medianas*/
+
+    .carousel-container #imag {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 100%;
+      overflow: hidden;
+      position: relative;
+      height: auto; /* Ajusta la altura deseada para el carrusel */
+    }
+    .parrafo {
+      font-size: 30px;
+      padding-left: 1%;
+    }
+    .parrafo p {
+      font-size: 25px;
+    }
+  }
+}
