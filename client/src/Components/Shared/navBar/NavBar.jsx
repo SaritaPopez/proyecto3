@@ -20,12 +20,12 @@ function NavBar({ user, logout }) {
       { user && <>
       <div className='container-entries'>
         <NavLink className='linkStyle' to='/message'>
-          <p>Crear entrada</p>
+          <p>✍🏻  Crear entrada ➕</p>
         </NavLink>
       </div>
       <div className='container-logout'>
         <NavLink className='button-logout' onClick={logout}>
-          <p>Cerrar sesión</p>
+          <p>👋🏻  Cerrar sesión 🔚</p>
         </NavLink>
       </div>
       </>}

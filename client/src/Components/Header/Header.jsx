@@ -10,7 +10,7 @@ function Header() {
     <>
       <header className='headerr'>
         <div className='header-container'>
-          <Link to='/contact' className='contacts'>
+          <Link className='contacts' to='/contact'>
             <FaBars />
           </Link>
           <h1 className='h1Header'>Ciudad Accesible</h1>
