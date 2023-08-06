@@ -232,8 +232,7 @@
     }
   
     .imagenCarruselEntry {
-      margin-left: 10vw;
-      margin-right: 10vw;
+      margin: 0 10rem
     }
     .parrafo {
       padding-left: 20%;
@@ -279,8 +278,7 @@
     }
 
     .imagenCarruselEntry {
-      margin-left: 10vw;
-      margin-right: 10vw;
+      margin: 0 15rem
     }
   }
 }

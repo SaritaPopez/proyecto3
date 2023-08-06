@@ -16,6 +16,7 @@ const selectEntryByIdQuery = async (entryId, userId = 0) => {
                 E.city,
                 E.district,
                 E.description,
+                E.neightborhood,
                 E.resolved,
                 U.username,
                 E.userId,
