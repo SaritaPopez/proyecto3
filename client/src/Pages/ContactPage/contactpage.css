@@ -5,7 +5,6 @@
   transform: translateX(-50%);
   z-index: 1;
   width: 100vw;
-  max-width: 20vw; /* Ajusta el valor según el tamaño deseado del logo */
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -34,7 +33,7 @@
   overflow-x: hidden;
   max-width: 960px;
   margin-inline: auto;
-  padding: 50px 15px;
+  padding: 15px;
 }
 .titleContact {
   margin-bottom: 50px;
