@@ -66,6 +66,7 @@
   top: 700px; /* Colocar el div "parrafo" debajo del div "headertitle" */
   width: 100%;
   font-family: Montserrat, sans-serif;
+  font-weight: bold;
 }
 
 /*css confetti */
