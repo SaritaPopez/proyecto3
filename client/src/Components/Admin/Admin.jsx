@@ -70,7 +70,7 @@ const Admin = ({ token }) => {
           <p>San Diego, Ca</p>
         </div>
         <div className='container2'>
-          <p>
+          <p className='parrafo1Container2'>
             ¡Haz tu ciudad más <br></br>accesible hoy!
           </p>
 

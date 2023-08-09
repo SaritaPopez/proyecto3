@@ -108,7 +108,7 @@ const SingleEntryPage = () => {
     <>
       <Header />
       <div className='single'>
-        <div className='headertitle'>{entry && <h2>{entry.title}</h2>}</div>
+        <div className='headertitle'>{entry && <h2 className='h2newEntry'>{entry.title}</h2>}</div>
         {entry?.photos.length > 0 ? (
           <div className='carousel-container'>
             <button className='carousel-button-iz' onClick={prevSlide}>
@@ -134,17 +134,16 @@ const SingleEntryPage = () => {
 
         <div className='blue'>div</div>
         <div className='parrafo'>
-          <h4>OVERVIEW</h4>
+          <h4 className='titleDescription'>DESCRIPCIÓN GENERAL</h4>
           <div className='desc'>
             <p>{entry && entry.description}</p>
           </div>
-          <div className='district'>
-            <p> Ciudad: {entry?.city} </p>
-            <p> Barrio: {entry?.neightborhood}</p>
-            <p> Distrito: {entry?.district}</p>
+          <div className='category'>
+            <p><strong>Ciudad:</strong> {entry?.city}</p>
+            <p><strong>Barrio:</strong> {entry?.neightborhood}</p>
+            <p><strong>Distrito:</strong> {entry?.district}</p>
+            <p><strong>Autor:</strong> {entry && entry.username}</p>
           </div>
-          <p>Autor: {entry && entry.username}</p>
-
           <div className='apartadoLike'>
             <button
               className={`like-button ${entry?.likedByMe ? 'liked' : ''}`}
