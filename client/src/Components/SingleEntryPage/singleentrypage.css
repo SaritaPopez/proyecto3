@@ -113,13 +113,14 @@
 }
 
 .carousel-container {
+  transition: transform 0.5s ease;
   display: flex;
   align-items: center;
   justify-content: space-between;
   max-width: 100%;
   overflow: hidden;
   position: relative;
-  height: 300px; /* Ajusta la altura deseada para el carrusel */
+  height: 300px;
 }
 
 .carousel-button-de {
