@@ -39,7 +39,7 @@ function LoginForm({ login }) {
         <Link className='logoWeb' to='/'>
           <img
             className='logoGoHome'
-            src='../src/assets/C-A.svg'
+            src='../src/Assets/C-A.svg'
             alt='logo web'
           />
         </Link>

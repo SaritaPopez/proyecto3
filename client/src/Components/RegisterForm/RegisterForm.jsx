@@ -37,7 +37,7 @@ function RegisterForm() {
       <div className='image-container'>
         <img
           className='imagenCiudad'
-          src='https://tipsparatuviaje.com/wp-content/uploads/2019/11/rotterdam-ho.jpg'
+          src='https://images.pexels.com/photos/380283/pexels-photo-380283.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
         />
         <Link className='logoWeb' to='/'>
           <img

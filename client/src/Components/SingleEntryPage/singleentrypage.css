@@ -73,14 +73,12 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 0.5rem;
-
 }
 
 .category p strong {
   font-weight: bold;
   font-size: 13px;
 }
-
 
 /*css confetti */
 
@@ -228,7 +226,6 @@
   }
 
   @media screen and (min-width: 768px) {
-
     .headertitle {
       font-size: 22px;
       padding-bottom: 1rem;
@@ -237,9 +234,9 @@
     .h2newEntry {
       padding-top: 1px;
     }
-  
+
     .imagenCarruselEntry {
-      margin: 0 10rem
+      margin: 0 10rem;
     }
     .parrafo {
       padding-left: 20%;
@@ -271,6 +268,22 @@
   @media screen and (min-width: 1024px) {
     /* pantallas medianas*/
 
+    .category {
+      top: 700px; /* Colocar el div "parrafo" debajo del div "headertitle" */
+      width: 90%;
+      font-family: Montserrat, sans-serif;
+      display: flex;
+      font-size: 15px;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 0.5rem;
+    }
+
+    .category p strong {
+      font-weight: bold;
+      font-size: 22px;
+    }
+
     .carousel-container #imag {
       display: flex;
       align-items: center;
@@ -280,17 +293,17 @@
       position: relative;
       height: auto; /* Ajusta la altura deseada para el carrusel */
     }
-    
+
     .parrafo {
       font-size: 30px;
       padding-left: 1%;
     }
     .parrafo p {
-      font-size: 25px;
+      font-size: 18px;
     }
 
     .imagenCarruselEntry {
-      margin: 0 15rem
+      margin: 0 15rem;
     }
   }
 }
