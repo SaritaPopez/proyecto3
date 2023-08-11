@@ -57,7 +57,7 @@ API diseñada para mejorar la accesibilidad en la ciudad, permitiendo a los usua
 
 ### Endpoints Usuarios:
 
-- POST [/users] - Registro de usuario.
+- POST [/users/register] - Registro de usuario.
 - POST [/users/login] - Login de usuario (devuelve token).
 - GET [/users] - Devuelve información del usuario del token. **TOKEN**
 
