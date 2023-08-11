@@ -6,6 +6,8 @@ API diseñada para mejorar la accesibilidad en la ciudad, permitiendo a los usua
 
 - Crear una base de datos vacía en una instancia de MySQL local.
 
+- Ir a la terminal de Visual Studio Code y acceder a la carpera mediante el comando `cd backend`. 
+
 - Instalar las dependencias mediante el comando `npm install` o `npm i`.
 
 - Guardar el archivo `.env.example` como `.env` y cubrir los datos necesarios.
