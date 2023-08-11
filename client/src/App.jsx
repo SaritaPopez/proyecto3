@@ -5,7 +5,7 @@ import NotFoundPage from './Pages/NotFoundPage/NotFoundPage';
 import RegisterPage from './Pages/RegisterPage/RegisterPage';
 import LoginPage from './Pages/LoginPage/LoginPage';
 import EntryCreatePage from './Pages/EntryCreatePage/AdminPage';
-import SingleEntryPage from './Components/SingleEntryPage/SingleEntryPage';
+import SingleEntryPage from './Pages/SingleEntryPage/SingleEntryPage';
 import ContactPage from './Pages/ContactPage/ContactPage';
 
 function App() {

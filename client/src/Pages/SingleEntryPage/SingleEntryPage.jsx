@@ -4,8 +4,8 @@ import useAuth from '../../Hooks/useAuth';
 import getEntryService from '../../Services/getEntryService';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
-import Footer from '../Footer/Footer';
-import Header from '../Header/Header';
+import Footer from '../../Components/Footer/Footer';
+import Header from '../../Components/Header/Header';
 import flecha from '../../Assets/flecha.png';
 import flechaIzquierda from '../../Assets/flechaIzquierda.png';
 import likeEntryService from '../../Services/likeEntryService';
@@ -108,7 +108,9 @@ const SingleEntryPage = () => {
     <>
       <Header />
       <div className='single'>
-        <div className='headertitle'>{entry && <h2 className='h2newEntry'>{entry.title}</h2>}</div>
+        <div className='headertitle'>
+          {entry && <h2 className='h2newEntry'>{entry.title}</h2>}
+        </div>
         {entry?.photos.length > 0 ? (
           <div className='carousel-container'>
             <button className='carousel-button-iz' onClick={prevSlide}>
@@ -139,10 +141,18 @@ const SingleEntryPage = () => {
             <p>{entry && entry.description}</p>
           </div>
           <div className='category'>
-            <p><strong>Ciudad:</strong> {entry?.city}</p>
-            <p><strong>Barrio:</strong> {entry?.neightborhood}</p>
-            <p><strong>Distrito:</strong> {entry?.district}</p>
-            <p><strong>Autor:</strong> {entry && entry.username}</p>
+            <p>
+              <strong>Ciudad:</strong> {entry?.city}
+            </p>
+            <p>
+              <strong>Barrio:</strong> {entry?.neightborhood}
+            </p>
+            <p>
+              <strong>Distrito:</strong> {entry?.district}
+            </p>
+            <p>
+              <strong>Autor:</strong> {entry && entry.username}
+            </p>
           </div>
           <div className='apartadoLike'>
             <button
