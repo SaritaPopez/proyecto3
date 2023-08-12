@@ -1,8 +1,13 @@
 # Ciudad más accesible
 
-API diseñada para mejorar la accesibilidad en la ciudad, permitiendo a los usuarios registrados y anónimos denunciar problemas de accesibilidad en lugares específicos. Los usuarios pueden seleccionar una ciudad y ver una lista de problemas activos y resueltos. La API aborda de manera efectiva los problemas informados, con el objetivo de crear un entorno inclusivo.
+Esta API ha sido diseñada para mejorar la accesibilidad en nuestra ciudad, permitiendo que tanto usuarios registrados como visitantes anónimos puedan identificar problemas de accesibilidad en lugares específicos de manera sencilla y efectiva.
 
-## Instalar
+¿Cómo funciona? Muy fácil. A través de una barra de búsqueda, los usuarios pueden explorar su ciudad, barrio o distrito de interés. Una vez que se desplieguen los resultados, la API mostrará una lista detallada de los problemas de accesibilidad que están siendo abordados, así como aquellos que ya han sido solucionados.
+
+Además, los usuarios registrados tienen la opción de expresar su apoyo a las publicaciones que consideren relevantes dando un "like".
+La misión de esta API es encarar los desafíos reportados de manera eficaz por su administrador, con el objetivo último de crear un entorno inclusivo para todos. Al atender de forma integral las preocupaciones planteadas, buscamos contribuir a la construcción de una comunidad más equitativa, donde la accesibilidad sea una realidad palpable y constante.
+
+## Instalar Backend
 
 - Crear una base de datos vacía en una instancia de MySQL local.
 
