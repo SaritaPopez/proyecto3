@@ -54,6 +54,8 @@ nav > p {
 }
 
 .contacts {
+  font-size: 30px;
+
   color: rgb(249, 162, 0);
   position: absolute;
   top: 22px; /* Ajusta la distancia desde la parte superior según tus necesidades */
@@ -68,7 +70,7 @@ nav > p {
 
 @media screen and (min-width: 768px) {
   .contacts {
-    font-size: 20px;
+    font-size: 30px;
     position: absolute;
     top: 20px;
     left: 40px;
@@ -119,7 +121,7 @@ nav > p {
 
 @media screen and (min-width: 1024px) {
   .contacts {
-    font-size: 30px;
+    font-size: 40px;
   }
   .nav-bar > .container-entries,
   .nav-bar > .container-logout {
