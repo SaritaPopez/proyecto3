@@ -1,7 +1,12 @@
 * {
   font-family: Montserrat, sans-serif;
 }
-
+.city {
+  color:#000000;
+}
+.adm {
+  color: rgb(255, 255, 255);
+}
 .Admin {
   display: flex;
   flex-direction: column;
@@ -39,7 +44,7 @@
 }
 
 .titleFormNewEntry {
-  border-bottom: 1px solid rgb(197, 195, 195);
+  border-bottom: 1px solid rgb(195, 194, 194);
   width: 85vw;
   text-align: center;
 }
@@ -87,14 +92,14 @@
   padding-top: 3rem;
   font-size: 20px;
   font-weight: bold;
-  color: white;
+  color: rgb(255, 255, 255);
   width: 100vh;
 }
 .parrafo1Container2 {
   text-align: center;
   font-size: 40px;
   font-weight: bold;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .container2 {
@@ -108,8 +113,8 @@
 
 /* Estilo del botón "Publicar" */
 .form-container button {
-  background-color: #ffffff;
-  color: rgb(183, 177, 177);
+  background-color: #f0f0f0;
+  color: rgb(79, 79, 79);
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -163,7 +168,7 @@
     font-size: 20px;
     font-weight: bold;
     font-family: Montserrat, sans-serif;
-    color: white;
+    color: rgb(251, 251, 251);
     width: 100vh;
   }
   .parrafo1Container2 {
@@ -171,7 +176,7 @@
     font-size: 2rem;
     font-weight: bold;
     font-family: Montserrat, sans-serif;
-    color: white;
+    color: rgb(255, 255, 255);
   }
 
   /* Estilo del botón "Enviar" */
