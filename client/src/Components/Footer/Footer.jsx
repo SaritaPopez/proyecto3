@@ -10,7 +10,7 @@ function Footer() {
       {token && user && user.role === "admin" ? (
         <>
           <div className="container-entries">
-            <Link to="/create-entry">
+            <Link to="/message">
               <img src="../src/Assets/plus.png" alt="icono mas" />
             </Link>
           </div>
