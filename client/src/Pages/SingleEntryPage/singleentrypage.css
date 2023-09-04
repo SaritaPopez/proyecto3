@@ -11,14 +11,17 @@
 }
 
 .carousel-container {
+  transition: transform 0.5s ease;
   display: flex;
   align-items: center;
   justify-content: space-between;
   max-width: 100%;
   overflow: hidden;
   position: relative;
-  height: 300px; /* Ajusta la altura deseada para el carrusel */
-  bottom: 22px;
+  height: 300px;
+}
+.carousel-container img{
+ 
 }
 
 .resolved {
@@ -34,9 +37,9 @@
 .titleDescription{
   font-size: 14px;
 }
-.imagenCarruselEntry img{
-height:100%;
 
+.carousel-container img{
+  height: 100%;
 }
 
 .single {
