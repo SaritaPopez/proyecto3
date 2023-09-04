@@ -1,4 +1,17 @@
 /* Estilo general */
+.resolved {
+  color: green; /* Color verde para el estado resuelto */
+}
+
+.unresolved {
+  color: red; /* Color rojo para el estado no resuelto */
+}
+.labels{
+  font-size: 13px;
+}
+.titleDescription{
+  font-size: 14px;
+}
 .imagenCarruselEntry img{
 height:100%;
 }
@@ -54,7 +67,7 @@ height:100%;
 
 .desc p {
   padding-right: 10%;
-  font-size: 13px;
+  font-size: 11.5px;
 }
 
 .blue {
@@ -71,7 +84,7 @@ height:100%;
   width: 90%;
   font-family: Montserrat, sans-serif;
   display: flex;
-  font-size: 13px;
+  font-size: 12px;
   justify-content: space-between;
   align-items: center;
   padding-top: 0.5rem;
@@ -79,7 +92,7 @@ height:100%;
 
 .category p strong {
   font-weight: bold;
-  font-size: 13px;
+  font-size: 11px;
 }
 
 /*css confetti */

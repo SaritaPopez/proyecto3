@@ -176,7 +176,12 @@ const SingleEntryPage = () => {
           </div>
 
           {/* Mostrar si el servicio está resuelto o no */}
-          <div className="resolved-status">
+
+          <div
+            className={`resolved-status ${
+              entry?.resolved ? "resolved" : "unresolved"
+            }`}
+          >
             {entry?.resolved ? (
               <p>Estado: Resuelto</p>
             ) : (
@@ -194,7 +199,9 @@ const SingleEntryPage = () => {
                 checked={entry?.resolved}
                 readOnly={entry?.resolved}
               />
-              <label htmlFor="resolveService">Marcar como Resuelto</label>
+              <label htmlFor="resolveService" className="labels">
+                Marcar como Resuelto
+              </label>
             </>
           )}
         </div>

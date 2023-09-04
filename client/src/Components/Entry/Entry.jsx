@@ -1,26 +1,35 @@
-import PropTypes from 'prop-types';
-import EntryBody from './EntryBody/EntryBody';
-import EntryHeader from './EntryHeader/EntryHeader';
-import EntryFooter from './EntryFooter/EntryFooter';
-import { Link } from 'react-router-dom';
+import PropTypes from "prop-types";
+import EntryBody from "./EntryBody/EntryBody";
+import EntryHeader from "./EntryHeader/EntryHeader";
+import EntryFooter from "./EntryFooter/EntryFooter";
+import { Link } from "react-router-dom";
 
 const Entry = ({ entry, toogleLike, deleteEntry, loading }) => {
-  console.log('Nombre de la imagen:', entry.photos[0]?.name);
+  console.log("Nombre de la imagen:", entry.photos[0]?.name);
   return (
     <Link
-      className='link'
+      className="link"
       to={`/entries/${entry.id}`}
       style={{
-        textDecoration: 'none',
+        textDecoration: "none",
       }}
     >
       <li
-        className={`entry ${entry.resolved ? 'resolved' : ''}`}
-        title={entry.resolved ? 'Entrada resuelta' : 'Entrada no resuelta'}
+        className={`entry ${entry.resolved ? "resolved" : ""}`}
+        title={entry.resolved ? "Entrada resuelta" : "Entrada no resuelta"}
       >
-        <EntryHeader username={entry.username} createdAt={entry.createdAt} />
-        <EntryBody description={entry.description} photos={entry.photos} />
+        <EntryHeader
+          username={entry.username}
+          createdAt={entry.createdAt}
+          className="head"
+        />
+        <EntryBody
+          description={entry.description}
+          photos={entry.photos}
+          className="bod"
+        />
         <EntryFooter
+          className="foot"
           entryId={entry.id}
           owner={entry.owner}
           likes={entry.likes}
